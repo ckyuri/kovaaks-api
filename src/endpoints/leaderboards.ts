@@ -69,19 +69,25 @@ export class LeaderboardAPI {
       }
     );
     
-    // If we have a country filter, let's also post-filter the results to ensure only players from that country are included
+    // Debug log to show country values (only when a country filter is applied)
     if (country && response && response.data && Array.isArray(response.data)) {
-      const originalCount = response.data.length;
+      console.log(`Received ${response.data.length} players for country filter '${country.toUpperCase()}'`);
       
-      // Filter to only include players from the specified country
-      response.data = response.data.filter(player => 
-        player.country && player.country.toUpperCase() === country.toUpperCase()
-      );
+      // Log countries present in the response to help diagnose issues
+      const countriesInResponse = new Set<string>();
+      response.data.forEach(player => {
+        if (player.country) {
+          countriesInResponse.add(player.country);
+        }
+      });
       
-      // If filtering removed players, log a warning
-      if (response.data.length < originalCount) {
-        console.log(`Country filter applied: Showing only ${response.data.length} players from ${country.toUpperCase()} (filtered from ${originalCount})`);
+      if (countriesInResponse.size > 0) {
+        console.log(`Countries in response: ${Array.from(countriesInResponse).join(', ')}`);
+      } else {
+        console.log('No country information found in response');
       }
+      
+      // No additional filtering required - the API should already filter by country
     }
     
     // Cache the response
