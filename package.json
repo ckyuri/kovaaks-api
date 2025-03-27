@@ -1,6 +1,6 @@
 {
   "name": "kovaaks-ts-wrapper",
-  "version": "1.6.5",
+  "version": "1.6.6",
   "description": "A comprehensive TypeScript wrapper for the Kovaaks FPS Aim Trainer API",
   "module": "index.ts",
   "main": "dist/index.js",

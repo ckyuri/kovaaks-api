@@ -188,10 +188,33 @@ const usRanks = await client.leaderboards.getGlobalLeaderboard({
 });
 ```
 
+The `getGlobalLeaderboard` method returns:
+
+```typescript
+{
+  // Array of leaderboard entries
+  data: Array<{
+    rank: number;                   // Global rank
+    rankChange: number;             // Rank change since last update
+    steamId: string;                // Steam ID
+    webappUsername: string | null;  // Kovaaks webapp username
+    steamAccountName: string;       // Steam profile name
+    points: string;                 // Total points
+    scenariosCount: string;         // Number of scenarios played
+    completionsCount: number;       // Number of total completions
+    kovaaksPlusActive: boolean;     // Whether user has Kovaak's+
+    country: string;                // Country code (e.g., 'US', 'GB')
+  }>;
+  
+  // Total number of entries
+  total: string;
+}
+```
+
 #### User Search and Ranking
 ```typescript
 // Search by username
-const user = await client.leaderboards.searchUserByUsername('firefly', {
+const users = await client.leaderboards.searchUserByUsername('firefly', {
   filterByCountry: 'US',    // Optional: filter by country
   onlyWithCountry: true,    // Optional: only players with country set
   onlyRanked: true,         // Optional: only ranked players
@@ -199,28 +222,132 @@ const user = await client.leaderboards.searchUserByUsername('firefly', {
   sortOrder: 'asc',         // Optional: 'asc' or 'desc'
   limit: 5                  // Optional: limit results
 });
+```
 
+The `searchUserByUsername` method returns:
+
+```typescript
+// Array of user search results
+Array<{
+  steamId: string;                    // Steam ID
+  rank?: number;                      // Global rank (may be null)
+  countryRank?: number;               // Country rank (may be null)
+  regionRank?: number;                // Region rank (may be null)
+  rankChange?: number;                // Global rank change
+  countryRankChange?: number;         // Country rank change
+  regionRankChange?: number;          // Region rank change
+  username?: string;                  // Kovaaks webapp username (may be null)
+  steamAccountName?: string;          // Steam profile name
+  steamAccountAvatar?: string;        // Steam avatar URL
+  country?: string | null;            // Country code
+  kovaaksPlusActive?: boolean;        // Whether user has Kovaak's+
+}>
+```
+
+#### Search by Steam ID
+```typescript
 // Search by Steam ID
 const userBySteamId = await client.leaderboards.searchUserBySteamId('76561198123456789');
+```
 
+The `searchUserBySteamId` method returns the same type as `searchUserByUsername` but for a single user:
+
+```typescript
+{
+  steamId: string;                    // Steam ID
+  rank?: number;                      // Global rank (may be null)
+  countryRank?: number;               // Country rank (may be null)
+  regionRank?: number;                // Region rank (may be null)
+  rankChange?: number;                // Global rank change
+  countryRankChange?: number;         // Country rank change
+  regionRankChange?: number;          // Region rank change
+  username?: string;                  // Kovaaks webapp username (may be null)
+  steamAccountName?: string;          // Steam profile name
+  steamAccountAvatar?: string;        // Steam avatar URL
+  country?: string | null;            // Country code
+  kovaaksPlusActive?: boolean;        // Whether user has Kovaak's+
+}
+```
+
+#### Fast and efficient rank lookup (avoids pagination)
+```typescript
 // Fast and efficient rank lookup (avoids pagination)
 const efficientRank = await client.leaderboards.findUserRankEfficient('username');
-// Returns: { globalRank, countryRank, regionRank, country, region, username, steamId }
+```
 
+The `findUserRankEfficient` method returns:
+
+```typescript
+{
+  globalRank: number | null;       // Global rank
+  countryRank: number | null;      // Country rank
+  regionRank: number | null;       // Region rank
+  country: string | null;          // Country code
+  region: string | null;           // Region name
+  username: string;                // Username
+  steamId: string | null;          // Steam ID
+}
+```
+
+#### Get comprehensive ranking information
+```typescript
 // Get comprehensive ranking information
 const completeRanking = await client.leaderboards.getUserCompleteRanking('username');
-// Returns global, country, and region ranks with region name
+```
+
+The `getUserCompleteRanking` method returns:
+
+```typescript
+{
+  globalRank: number | null;       // Global rank
+  countryRank: number | null;      // Country rank
+  regionRank: number | null;       // Region rank
+  country: string | null;          // Country code
+  region: string | null;           // Region name
+}
 ```
 
 #### Regional Context
 ```typescript
 // Get user's regional positioning context
 const regionalContext = await client.leaderboards.getUserRegionalContext('username');
-// Returns detailed information about user's standings in their country and region
-// including top players in country/region and total player counts
+```
 
-// Or use the combined API for more convenience
-const context = await client.combined.getRegionalContext('username');
+The `getUserRegionalContext` method returns:
+
+```typescript
+{
+  username: string;
+  steamAccountName: string;
+  steamId: string;
+  
+  // Player's ranking information
+  playerRanking: {
+    global: number | null;          // Global rank
+    country: number | null;         // Country rank
+    region: number | null;          // Region rank
+    countryName: string | null;     // Country code
+    regionName: string | null;      // Region name (e.g., 'North America')
+  };
+  
+  // Country context
+  countryContext: {
+    countryName: string | null;     // Country code
+    globalRank: number | null;      // Country's global rank
+    totalPlayers: number;           // Total players in country
+    // Top players in the country
+    topPlayers: Array<LeaderboardEntry>;
+  };
+  
+  // Regional context
+  regionContext: {
+    regionName: string | null;      // Region name
+    globalRank: number | null;      // Region's global rank
+    totalPlayers: number;           // Total players in region
+    // Top players in the region
+    topPlayers: Array<LeaderboardEntry>;
+  };
+}
 ```
 
 ### User Endpoints
@@ -306,16 +433,198 @@ const popular = await client.scenarios.getPopular({
   page: 1, 
   max: 10 
 });
+```
 
+The `getPopular` method returns:
+
+```typescript
+{
+  page: number;      // Current page number
+  max: number;       // Max results per page
+  total: number;     // Total number of scenarios
+  data: Array<{      // Array of scenario items
+    id: number;      // Scenario ID
+    name: string;    // Scenario name
+    description: string; // Scenario description
+    authors: string[]; // List of authors
+    created: string; // Creation date (ISO format)
+    aimType: string | null; // Type of aim (tracking, clicking, etc.)
+    tag: string;     // Scenario tag
+    popularity: number; // Popularity score
+    plays: number;   // Number of plays
+  }>;
+}
+```
+
+```typescript
 // Get trending scenarios
 const trending = await client.scenarios.getTrending();
+```
 
+The `getTrending` method returns:
+
+```typescript
+Array<{
+  id: number;        // Scenario ID
+  name: string;      // Scenario name
+  description: string; // Scenario description
+  authors: string[]; // List of authors
+  created: string;   // Creation date (ISO format)
+  aimType: string | null; // Type of aim (tracking, clicking, etc.)
+  tag: string;       // Scenario tag
+  popularity: number; // Popularity score
+  plays: number;     // Number of plays
+  recentPlays: number; // Number of recent plays
+  trendFactor: number; // Trending score
+}>
+```
+
+```typescript
 // Get user scenario scores
 const scores = await client.scenarios.getUserScores('username', {
   page: 1,
   max: 10,
   sortParam: ['count']
 });
+```
+
+The `getUserScores` method returns:
+
+```typescript
+{
+  data: Array<{
+    leaderboardId: number; // Leaderboard ID
+    scenarioId: number;    // Scenario ID
+    name: string;          // Scenario name
+    plays: number;         // Number of plays by the user
+    score: number;         // User's best score
+    rank: number | null;   // User's rank
+    created: string;       // First play date (ISO format)
+    lastPlayed: string;    // Last play date (ISO format)
+  }>;
+  page: number;            // Current page
+  max: number;             // Results per page
+  total: number;           // Total scores
+}
+```
+
+### Performance Analysis
+
+```typescript
+// Get scenario performance with detailed metadata
+const scenarioData = await client.combined.getScenarioPerformance('username');
+```
+
+The `getScenarioPerformance` method returns:
+
+```typescript
+{
+  username: string;        // Username
+  totalScenarios: number;  // Number of scenarios played
+  scenarioDetails: Array<{
+    leaderboardId: number; // Leaderboard ID
+    scenarioName: string;  // Scenario name
+    plays: number;         // Number of plays
+    bestScore: number;     // Best score
+    rank: number | null;   // Rank on the leaderboard
+    dateLastPlayed: string; // Last played date (ISO format)
+    metadata: {            // Additional scenario metadata
+      popularity: number;  // Popularity score
+      totalPlays: number;  // Total plays across all users
+      aimType: string | null; // Type of aim (tracking, clicking, etc.)
+      authors: string[];   // List of authors
+      description: string; // Scenario description
+    };
+  }>;
+}
+```
+
+```typescript
+// Get activity timeline with detailed filtering
+const activityTimeline = await client.combined.getActivityTimeline('username', {
+  limit: 20,
+  sortBy: 'date',
+  sortOrder: 'desc',
+  includeMetadata: true
+});
+```
+
+The `getActivityTimeline` method returns:
+
+```typescript
+{
+  username: string;        // Username
+  totalActivities: number; // Total number of activities
+  activities: Array<{
+    timestamp: string;     // Activity date (ISO format)
+    scenarioName: string;  // Scenario name
+    score: number;         // Score achieved
+    leaderboardId: number; // Leaderboard ID
+    scenarioDetails: {     // Additional scenario details
+      aimType: string | null; // Type of aim
+      authors: string[];   // List of authors
+      description: string; // Scenario description
+      popularity: number;  // Popularity score
+      totalPlays: number;  // Total number of plays
+    };
+  }>;
+  // Optional metadata for filtering UIs
+  metadata?: {
+    dateRange: {
+      earliest: string;   // Earliest activity date
+      latest: string;     // Latest activity date
+    };
+    scoreRange: {
+      min: number;        // Minimum score
+      max: number;        // Maximum score
+    };
+    uniqueScenarios: string[]; // List of unique scenario names
+    uniqueAimTypes: string[];  // List of unique aim types
+  };
+  // Applied filters that were used (if includeFilterState was true)
+  appliedFilters?: {
+    startDate?: string;
+    endDate?: string;
+    scenarioFilter?: string;
+    scoreRange?: { min: number; max: number };
+    aimType?: string;
+    sortBy?: string;
+    sortOrder?: 'asc' | 'desc';
+  };
+}
+```
+
+```typescript
+// Get benchmark progress
+const benchmarkProgress = await client.combined.findBenchmarkProgress('username');
+```
+
+The `findBenchmarkProgress` method returns:
+
+```typescript
+{
+  username: string;        // Username
+  overallProgress: number; // Overall progress (0-100 percentage)
+  overallRank: number | null; // Overall benchmark rank
+  // Progress by category
+  categories: Record<string, {
+    progress: number;     // Category progress (0-100 percentage)
+    rank: number | null;  // Category rank
+    // Progress by scenario within this category
+    scenarios: Record<string, {
+      score: number;      // User's best score
+      leaderboardRank: number | null; // Rank on the leaderboard
+      scenarioRank: number | null;    // Rank for this scenario
+    }>;
+  }>;
+  // List of benchmarks
+  benchmarks: Array<{
+    benchmarkName: string; // Benchmark name
+    benchmarkId: number;   // Benchmark ID
+    benchmarkIcon: string; // Benchmark icon URL
+    progress: number;      // Progress (0-100 percentage)
+  }>;
+}
 ```
 
 ### Game Settings Endpoints
@@ -366,7 +675,56 @@ client.auth.logout();
 #### Complete User Profile
 ```typescript
 const completeProfile = await client.combined.getCompleteProfile('username');
-// Returns comprehensive profile including rankings, Steam info and metadata
+```
+
+The `getCompleteProfile` method returns:
+
+```typescript
+{
+  playerId: number;                // User ID in the Kovaaks system
+  username: string;                // Webapp username
+  steamId: string;                 // Steam ID
+  steamAccountName: string;        // Steam profile name
+  steamAccountAvatar: string;      // Steam avatar URL
+  country: string | null;          // Country code
+  created: string;                 // Account creation date (ISO format)
+  lastAccess: string;              // Last login date (ISO format)
+  
+  // Webapp-specific information
+  webapp: {
+    username: string;
+    roles: {
+      admin: boolean;
+      coach: boolean;
+      staff: boolean;
+    };
+    profileImage: string | null;
+    profileViews: number;
+    hasSubscribed: boolean;
+    socialMedia: Record<string, string>;
+    gamingPeripherals: Record<string, any>;
+    // Other webapp fields...
+  };
+  
+  // Ranking information
+  rankings: {
+    global: number | null;         // Global rank
+    country: number | null;        // Country rank
+    region: number | null;         // Region rank
+    countryName: string | null;    // Country code
+    regionName: string | null;     // Region name
+    
+    // Rank changes since last update
+    rankChanges?: {
+      global: number;
+      country: number;
+      region: number;
+    };
+  };
+  
+  kovaaksPlusActive: boolean;      // Whether user has Kovaak's+
+  scenariosPlayed: number | string; // Number of scenarios played
+}
 ```
 
 #### Scenario Performance
@@ -386,6 +744,171 @@ const userData = await client.combined.getAllUserData('username', {
   compareWithTopPlayers: true
 });
 ```
+
+The `getAllUserData` method returns a comprehensive object containing:
+
+```typescript
+{
+  // Basic profile information
+  profile: {
+    playerId: number;
+    username: string;
+    steamId: string;
+    steamAccountName: string;
+    steamAccountAvatar: string;
+    country: string | null;
+    created: string;        // ISO date
+    webapp: { ... };        // Additional webapp information
+    kovaaksPlusActive: boolean;
+    rankings: {             // Global and regional rankings
+      global: number | null;
+      country: number | null;
+      region: number | null;
+      countryName: string | null;
+      regionName: string | null;
+      rankChanges?: {
+        global: number;
+        country: number;
+        region: number;
+      };
+    };
+    scenariosPlayed: number | string;
+  },
+  
+  // Authentication status (optional)
+  authStatus?: { 
+    authenticated: boolean; 
+    tokenExpiry?: Date | null 
+  },
+  
+  // Performance data
+  scenarioPerformance: {
+    username: string;
+    totalScenarios: number;
+    scenarioDetails: Array<{
+      leaderboardId: number;
+      scenarioName: string;
+      plays: number;
+      bestScore: number;
+      rank: number | null;
+      dateLastPlayed: string;  // ISO date
+      metadata: {
+        popularity: number;
+        totalPlays: number;
+        aimType: string | null;
+        authors: string[];
+        description: string;
+      };
+    }>;
+  },
+  
+  // Benchmark progress data
+  benchmarkProgress: {
+    username: string;
+    overallProgress: number;  // 0-100 percentage
+    overallRank: number | null;
+    categories: Record<string, {  // Key is category name
+      progress: number;           // 0-100 percentage
+      rank: number | null;
+      scenarios: Record<string, { // Key is scenario name
+        score: number;
+        leaderboardRank: number | null;
+        scenarioRank: number | null;
+      }>;
+    }>;
+    benchmarks: Array<{
+      benchmarkName: string;
+      benchmarkId: number;
+      benchmarkIcon: string;
+      progress: number;          // 0-100 percentage
+    }>;
+  },
+  
+  // Activity timeline data
+  activityTimeline: {
+    username: string;
+    totalActivities: number;
+    activities: Array<{
+      timestamp: string;        // ISO date
+      scenarioName: string;
+      score: number;
+      leaderboardId: number;
+      scenarioDetails: {
+        aimType: string | null;
+        authors: string[];
+        description: string;
+        popularity: number;
+        totalPlays: number;
+      };
+    }>;
+    metadata?: {               // Activity filtering metadata
+      dateRange: { earliest: string; latest: string };
+      scoreRange: { min: number; max: number };
+      uniqueScenarios: string[];
+      uniqueAimTypes: string[];
+    };
+  },
+  
+  // Regional context data
+  regionalContext: {
+    username: string;
+    steamAccountName: string;
+    steamId: string;
+    playerRanking: {
+      global: number | null;
+      country: number | null;
+      region: number | null;
+      countryName: string | null;
+      regionName: string | null;
+    };
+    countryContext: {
+      countryName: string | null;
+      globalRank: number | null;
+      totalPlayers: number;
+      topPlayers: LeaderboardEntry[];  // Top players in country
+    };
+    regionContext: {
+      regionName: string | null;
+      globalRank: number | null;
+      totalPlayers: number;
+      topPlayers: LeaderboardEntry[];  // Top players in region
+    };
+  },
+  
+  // Additional data (depending on options)
+  followData?: { following: number; followers: number } | null;
+  badges?: any[] | null;
+  socialMedia?: Record<string, string> | null;
+  peripherals?: Record<string, any> | null;
+  kovaaksPlusDetails?: { active: boolean; expiration: string | null } | null;
+  monthlyActiveUsers?: number;
+  gameSettingsGlobal?: any;    // Game settings including sensitivity conversion
+  
+  // Performance comparisons (when requested)
+  topPlayerComparisons?: Array<{
+    scenarioName: string;
+    userScore: number;
+    userRank: number | null;
+    topScore: number;
+    difference: number;       // Percentage difference
+    percentOfTop: number;     // How close to top score (0-100)
+  }>;
+  
+  // Calculated percentiles
+  globalPercentile?: number;   // 0-100, higher is better
+  countryPercentile?: number;
+  regionPercentile?: number;
+  
+  // Historical data
+  rankHistory?: {
+    global?: Array<{ date: string; rank: number }>;
+    country?: Array<{ date: string; rank: number; country: string }>;
+    region?: Array<{ date: string; rank: number; region: string }>;
+  };
+}
+```
+
+This method delivers the most comprehensive data about a user available through the API, combining multiple endpoints for convenience. The options parameter allows you to customize exactly what data to include.
 
 ## Caching and Performance
 
