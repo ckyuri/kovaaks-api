@@ -23,19 +23,19 @@ A modern TypeScript wrapper for the [Kovaaks.com](https://kovaaks.com) API. This
 ## Installation
 
 ```bash
-npm install kovaaks-api-wrapper
+npm install kovaaks-ts-wrapper
 ```
 
 Or if you're using Yarn:
 
 ```bash
-yarn add kovaaks-api-wrapper
+yarn add kovaaks-ts-wrapper
 ```
 
 ## Basic Usage
 
 ```typescript
-import { KovaaksClient } from 'kovaaks-api-wrapper';
+import { KovaaksClient } from 'kovaaks-ts-wrapper';
 
 // Create a new client
 const client = new KovaaksClient();
@@ -485,7 +485,7 @@ import {
   sanitizeUsername,
   calculatePercentile,
   prioritizeValidProfiles
-} from 'kovaaks-api-wrapper/utils';
+} from 'kovaaks-ts-wrapper/utils';
 
 // Deduplicate concurrent API calls with the same parameters
 const debouncedFetch = deduplicateRequests(async (id) => {
@@ -514,7 +514,7 @@ const bestProfile = prioritizeValidProfiles(profiles, searchTerm);
 import { 
   getRegionMapping, 
   getCountriesInRegion 
-} from 'kovaaks-api-wrapper/utils';
+} from 'kovaaks-ts-wrapper/utils';
 
 // Get complete mapping of countries to regions
 const regionMap = getRegionMapping();
@@ -571,8 +571,8 @@ Contributions to the Kovaaks API Wrapper are welcome! Here are some guidelines:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/kovaaks-api-wrapper.git
-cd kovaaks-api-wrapper
+git clone https://github.com/yourusername/kovaaks-ts-wrapper.git
+cd kovaaks-ts-wrapper
 ```
 
 2. Install dependencies:
