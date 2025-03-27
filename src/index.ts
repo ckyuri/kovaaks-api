@@ -36,9 +36,19 @@ export class KovaaksClient {
     // Create the axios client with the provided config
     this.client = createApiClient(config);
 
-    // Configure caching (enabled by default)
+    // Configure caching
     if (config.enableCaching !== undefined) {
       apiCache.enableCaching = config.enableCaching;
+    }
+    
+    // Apply cache options from config if provided
+    if (config.cacheOptions) {
+      apiCache.updateConfig({
+        defaultTTL: config.cacheOptions.defaultTTL,
+        cacheDir: config.cacheOptions.cacheDir,
+        cacheFile: config.cacheOptions.cacheFile,
+        autoSaveInterval: config.cacheOptions.autoSaveInterval
+      });
     }
 
     // Initialize API endpoints

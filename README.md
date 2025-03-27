@@ -525,6 +525,58 @@ const countries = getCountriesInRegion('NA');
 // Returns: ['US', 'CA', 'MX', ...]
 ```
 
+## Persistent Caching
+
+The Kovaaks API wrapper now includes a persistent caching system that saves API responses to disk, ensuring cache data persists between application restarts.
+
+### Basic Caching
+
+Caching is enabled by default and requires no configuration:
+
+```typescript
+// Create client with default caching (enabled, saved to ~/.kovaaks-api-cache)
+const client = new KovaaksClient();
+
+// Enable/disable caching programmatically
+client.setCaching(true);  // Enable
+client.setCaching(false); // Disable
+```
+
+### Advanced Caching Configuration
+
+For more control over caching behavior:
+
+```typescript
+// Configure custom caching options
+const client = new KovaaksClient({
+  enableCaching: true,
+  cacheOptions: {
+    // Custom directory for cache files
+    cacheDir: '/path/to/cache/directory',
+    
+    // Custom cache filename
+    cacheFile: 'kovaaks-cache.json',
+    
+    // Default TTL for cached items (10 minutes)
+    defaultTTL: 10 * 60 * 1000,
+    
+    // Auto-save interval (disable with 0)
+    autoSaveInterval: 0 // Only save on exit
+  }
+});
+```
+
+### Cache Behavior
+
+- Cache is loaded from disk when the client is initialized
+- New responses are automatically cached in memory
+- Cache is periodically saved to disk (default: every 5 minutes)
+- Cache is always saved when the application exits normally
+- Expired items are automatically removed
+- Each API endpoint has appropriate TTL values
+
+This persistent caching system significantly improves performance for repeated API calls, even across different application runs.
+
 ## License
 
 MIT

@@ -390,10 +390,54 @@ export enum KovaaksErrorType {
 
 // Client Configuration
 export interface KovaaksClientConfig {
+  /**
+   * Base URL for the API (default: 'https://kovaaks.com')
+   */
   baseURL?: string;
+  
+  /**
+   * Request timeout in milliseconds (default: 60000 - 1 minute)
+   */
   timeout?: number;
+  
+  /**
+   * Custom headers for all requests
+   */
   headers?: Record<string, string>;
+  
+  /**
+   * Enable or disable caching globally (default: true)
+   */
   enableCaching?: boolean;
+  
+  /**
+   * Cache configuration options
+   */
+  cacheOptions?: {
+    /**
+     * Directory to store cache files (default: ~/.kovaaks-api-cache)
+     */
+    cacheDir?: string;
+    
+    /**
+     * Name of the cache file (default: cache.json)
+     */
+    cacheFile?: string;
+    
+    /**
+     * Default time-to-live for cache entries in milliseconds (default: 5 minutes)
+     */
+    defaultTTL?: number;
+    
+    /**
+     * Interval in ms to auto-save cache to disk (default: 5 minutes, 0 to disable)
+     */
+    autoSaveInterval?: number;
+  };
+  
+  /**
+   * Any additional configuration options
+   */
   [key: string]: any;
 }
 
