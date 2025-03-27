@@ -1,0 +1,125 @@
+{
+  "data": [
+    {
+      "rank": 1,
+      "rankChange": 0,
+      "steamId": "76561199247873110",
+      "webappUsername": "rinobowzer",
+      "steamAccountName": "Prismatix",
+      "points": "42788553",
+      "scenariosCount": "3700",
+      "completionsCount": 34528,
+      "kovaaksPlusActive": true,
+      "country": "JP"
+    },
+    {
+      "rank": 2,
+      "rankChange": 0,
+      "steamId": "76561198390284214",
+      "webappUsername": "WorthlessGod",
+      "steamAccountName": "𝘽⁧⁧ 𝙇𝙊𝙊𝘿",
+      "points": "42431633",
+      "scenariosCount": "3536",
+      "completionsCount": 15355,
+      "kovaaksPlusActive": true,
+      "country": "US"
+    },
+    {
+      "rank": 3,
+      "rankChange": 0,
+      "steamId": "76561198083805976",
+      "webappUsername": "Kryzion",
+      "steamAccountName": "fuA Kryzion",
+      "points": "40916428",
+      "scenariosCount": "2790",
+      "completionsCount": 9310,
+      "kovaaksPlusActive": false,
+      "country": "DE"
+    },
+    {
+      "rank": 4,
+      "rankChange": 0,
+      "steamId": "76561198395171678",
+      "webappUsername": "Syaoh",
+      "steamAccountName": "Верный",
+      "points": "40294804",
+      "scenariosCount": "1901",
+      "completionsCount": 29140,
+      "kovaaksPlusActive": true,
+      "country": "JP"
+    },
+    {
+      "rank": 5,
+      "rankChange": 0,
+      "steamId": "76561198218488124",
+      "webappUsername": "Evil",
+      "steamAccountName": "rA EviL",
+      "points": "39527896",
+      "scenariosCount": "2259",
+      "completionsCount": 27948,
+      "kovaaksPlusActive": true,
+      "country": "GB"
+    },
+    {
+      "rank": 6,
+      "rankChange": 0,
+      "steamId": "76561199089427208",
+      "webappUsername": "slapped",
+      "steamAccountName": "rA slapped",
+      "points": "39333531",
+      "scenariosCount": "4780",
+      "completionsCount": 73282,
+      "kovaaksPlusActive": true,
+      "country": "GB"
+    },
+    {
+      "rank": 7,
+      "rankChange": 0,
+      "steamId": "76561199162046534",
+      "webappUsername": "tika+",
+      "steamAccountName": "ごめんなさい",
+      "points": "38896941",
+      "scenariosCount": "1917",
+      "completionsCount": 49240,
+      "kovaaksPlusActive": false,
+      "country": "JP"
+    },
+    {
+      "rank": 8,
+      "rankChange": 0,
+      "steamId": "76561198828944918",
+      "webappUsername": "ilovescarlett",
+      "steamAccountName": "sydney",
+      "points": "38881766",
+      "scenariosCount": "1986",
+      "completionsCount": 23936,
+      "kovaaksPlusActive": false,
+      "country": "CA"
+    },
+    {
+      "rank": 9,
+      "rankChange": 0,
+      "steamId": "76561198367538821",
+      "webappUsername": "hibiVerniy",
+      "steamAccountName": "not @hibiVerniy",
+      "points": "38561737",
+      "scenariosCount": "3235",
+      "completionsCount": 21995,
+      "kovaaksPlusActive": true,
+      "country": "AU"
+    },
+    {
+      "rank": 10,
+      "rankChange": 0,
+      "steamId": "76561198081278986",
+      "webappUsername": "SwerveMove",
+      "steamAccountName": "SwerveMove",
+      "points": "38392438",
+      "scenariosCount": "2122",
+      "completionsCount": 25397,
+      "kovaaksPlusActive": false,
+      "country": "US"
+    }
+  ],
+  "total": "1475018"
+}

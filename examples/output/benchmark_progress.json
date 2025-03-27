@@ -1,0 +1,34 @@
+{
+  "username": "xrageblaze@gmail.com",
+  "overallProgress": 0.704,
+  "overallRank": 0,
+  "categories": {
+    "Tracking": {
+      "progress": 0.704,
+      "rank": 0,
+      "scenarios": {
+        "B180TI Extra Small Sparky": {
+          "score": 105600,
+          "leaderboardRank": 15076,
+          "scenarioRank": 0
+        },
+        "Smooth ReactSphere": {
+          "score": 0,
+          "leaderboardRank": null,
+          "scenarioRank": 0
+        },
+        "B180TI Inverted Long Jump": {
+          "score": 0,
+          "leaderboardRank": null,
+          "scenarioRank": 0
+        },
+        "Glider GOATED Hard 50% smaller": {
+          "score": 0,
+          "leaderboardRank": null,
+          "scenarioRank": 0
+        }
+      }
+    }
+  },
+  "benchmarks": []
+}

@@ -1,0 +1,43 @@
+{
+  "name": "kovaaks-ts-wrapper",
+  "version": "1.6.0",
+  "description": "A comprehensive TypeScript wrapper for the Kovaaks FPS Aim Trainer API",
+  "module": "index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "bun build ./index.ts --outdir ./dist --target node",
+    "types": "tsc --emitDeclarationOnly --outDir dist",
+    "prepublish": "bun run build && bun run types",
+    "example": "bun examples/streamlined-example.ts",
+    "example:combined": "bun examples/combined-endpoints-example.ts"
+  },
+  "keywords": [
+    "kovaaks",
+    "aim",
+    "trainer",
+    "fps",
+    "api",
+    "wrapper",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ckyuri/kovaaks-api"
+  },
+  "homepage": "https://github.com/ckyuri/kovaaks-api",
+  "bugs": {
+    "url": "https://github.com/ckyuri/kovaaks-api/issues"
+  },  
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "axios": "^1.8.4",
+    "fuse.js": "^7.1.0"
+  }
+}

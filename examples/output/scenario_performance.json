@@ -1,0 +1,174 @@
+{
+  "username": "xrageblaze@gmail.com",
+  "totalScenarios": 10,
+  "scenarioDetails": [
+    {
+      "leaderboardId": "118",
+      "scenarioName": "voxTargetSwitch",
+      "plays": 36,
+      "bestScore": 96,
+      "rank": 9489,
+      "dateLastPlayed": "2025-03-26T23:58:28.431Z",
+      "metadata": {
+        "popularity": 2297939,
+        "totalPlays": 104317,
+        "aimType": "Target Switching",
+        "authors": [
+          "voxel"
+        ],
+        "description": "Inspiration from BF4 test range, go as fast as you can."
+      }
+    },
+    {
+      "leaderboardId": "11958",
+      "scenarioName": "Tamspeed 2bp Platinum",
+      "plays": 36,
+      "bestScore": 124,
+      "rank": 6351,
+      "dateLastPlayed": "2025-03-26T23:58:28.720Z",
+      "metadata": {
+        "popularity": 0,
+        "totalPlays": 0,
+        "aimType": null,
+        "authors": [],
+        "description": ""
+      }
+    },
+    {
+      "leaderboardId": "29493",
+      "scenarioName": "VT Pasu Rasp Intermediate",
+      "plays": 36,
+      "bestScore": 870,
+      "rank": 14622,
+      "dateLastPlayed": "2025-03-26T23:58:28.431Z",
+      "metadata": {
+        "popularity": 3011778,
+        "totalPlays": 93355,
+        "aimType": "Clicking",
+        "authors": [
+          "Fuglaa",
+          "Pauer",
+          "Tammas",
+          "Raspberry/Vodkards"
+        ],
+        "description": "Single-click bots travel in straight lines at various angles on an X/Y Plane, while making unpredictable directional changes and colliding with walls. The player's weapon has three shots and empty magazines recover per bullet."
+      }
+    },
+    {
+      "leaderboardId": "2102",
+      "scenarioName": "Smoothsphere Easy",
+      "plays": 33,
+      "bestScore": 12204,
+      "rank": 6545,
+      "dateLastPlayed": "2025-03-26T23:58:29.026Z",
+      "metadata": {
+        "popularity": 0,
+        "totalPlays": 0,
+        "aimType": null,
+        "authors": [],
+        "description": ""
+      }
+    },
+    {
+      "leaderboardId": "11921",
+      "scenarioName": "Controlsphere Platinum",
+      "plays": 33,
+      "bestScore": 14469,
+      "rank": 5589,
+      "dateLastPlayed": "2025-03-26T23:58:29.026Z",
+      "metadata": {
+        "popularity": 0,
+        "totalPlays": 0,
+        "aimType": null,
+        "authors": [],
+        "description": ""
+      }
+    },
+    {
+      "leaderboardId": "24952",
+      "scenarioName": "VT Smoothbot Intermediate",
+      "plays": 31,
+      "bestScore": 3559,
+      "rank": 14567,
+      "dateLastPlayed": "2025-03-26T23:58:28.432Z",
+      "metadata": {
+        "popularity": 3162966,
+        "totalPlays": 86971,
+        "aimType": "Tracking",
+        "authors": [
+          "Xytaglyph",
+          "Sackboy_Clank5",
+          "Tammas",
+          "Pauer",
+          "Raspberry/Vodkards"
+        ],
+        "description": "One invincible thin bot makes long and short strafes in a three dimensional space at various frequencies with smooth transitions between them."
+      }
+    },
+    {
+      "leaderboardId": "103209",
+      "scenarioName": "VT 1w3ts Intermediate S5",
+      "plays": 31,
+      "bestScore": 1167.36,
+      "rank": 4547,
+      "dateLastPlayed": "2025-03-26T23:58:29.025Z",
+      "metadata": {
+        "popularity": 0,
+        "totalPlays": 0,
+        "aimType": null,
+        "authors": [],
+        "description": ""
+      }
+    },
+    {
+      "leaderboardId": "24964",
+      "scenarioName": "VT skyTS Intermediate",
+      "plays": 29,
+      "bestScore": 1230,
+      "rank": 5305,
+      "dateLastPlayed": "2025-03-26T23:58:28.432Z",
+      "metadata": {
+        "popularity": 1620769,
+        "totalPlays": 67991,
+        "aimType": "Target Switching",
+        "authors": [
+          "voxel",
+          "fallen",
+          "Whisper",
+          "Raspberry/Vodkards"
+        ],
+        "description": "Bots move in slow horizontal lines in a rectangular prism at various depths and need to be tracked for a short period to be eliminated. Horizontal direction changes are very slow and predictable."
+      }
+    },
+    {
+      "leaderboardId": "103353",
+      "scenarioName": "VT Controlsphere Intermediate S5",
+      "plays": 29,
+      "bestScore": 3164,
+      "rank": 3231,
+      "dateLastPlayed": "2025-03-26T23:58:29.025Z",
+      "metadata": {
+        "popularity": 0,
+        "totalPlays": 0,
+        "aimType": null,
+        "authors": [],
+        "description": ""
+      }
+    },
+    {
+      "leaderboardId": "600",
+      "scenarioName": "patTargetSwitch easy",
+      "plays": 28,
+      "bestScore": 8380,
+      "rank": 3120,
+      "dateLastPlayed": "2025-03-26T23:58:29.026Z",
+      "metadata": {
+        "popularity": 0,
+        "totalPlays": 0,
+        "aimType": null,
+        "authors": [],
+        "description": ""
+      }
+    }
+  ]
+}

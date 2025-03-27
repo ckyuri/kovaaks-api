@@ -1,0 +1,2842 @@
+{
+  "profile": {
+    "playerId": 881033,
+    "steamAccountName": "kyuri",
+    "steamAccountAvatar": "https://avatars.steamstatic.com/d4b245bf50ac14190970b2b9cacf7e8762a70635_full.jpg",
+    "created": "2021-07-24T22:58:30.915Z",
+    "steamId": "76561198409458631",
+    "clientBuildVersion": "3.7.6.2025-03-13-13-18-42-a0d7bc7cd2e8",
+    "lastAccess": "2025-03-26T19:04:30.726Z",
+    "webapp": {
+      "roles": {
+        "admin": false,
+        "coach": false,
+        "staff": false
+      },
+      "videos": [],
+      "username": "xrageblaze@gmail.com",
+      "socialMedia": {
+        "tiktok": null,
+        "twitch": null,
+        "discord": "ckyurii",
+        "twitter": null,
+        "youtube": null,
+        "discord_id": "934987217456209951"
+      },
+      "gameSettings": {
+        "dpi": null,
+        "fov": null,
+        "cm360": null,
+        "rawInput": "true",
+        "sensitivity": null
+      },
+      "profileImage": null,
+      "profileViews": 33,
+      "hasSubscribed": false,
+      "gamingPeripherals": {
+        "mouse": "Pulsar X2 V3",
+        "headset": null,
+        "monitor": null,
+        "keyboard": null,
+        "mousePad": "Aqua Control 2"
+      }
+    },
+    "country": "gb",
+    "kovaaksPlusActive": false,
+    "badges": [],
+    "followCounts": {
+      "following": 0,
+      "followers": 0
+    },
+    "kovaaksPlus": {
+      "active": false,
+      "expiration": null
+    },
+    "scenariosPlayed": 2616,
+    "username": "xrageblaze@gmail.com",
+    "rankings": {
+      "global": 24951,
+      "country": 698,
+      "region": 3973,
+      "countryName": "gb",
+      "regionName": null,
+      "rankChanges": {
+        "global": 0,
+        "country": 0,
+        "region": 0
+      }
+    },
+    "lastRankUpdate": "2025-03-26T23:59:01.417Z",
+    "rankHistory": {
+      "global": [
+        {
+          "date": "2025-02-24",
+          "rank": 24950
+        },
+        {
+          "date": "2025-02-25",
+          "rank": 24954
+        },
+        {
+          "date": "2025-02-26",
+          "rank": 24956
+        },
+        {
+          "date": "2025-02-27",
+          "rank": 24961
+        },
+        {
+          "date": "2025-02-28",
+          "rank": 24960
+        },
+        {
+          "date": "2025-03-01",
+          "rank": 24962
+        },
+        {
+          "date": "2025-03-02",
+          "rank": 24960
+        },
+        {
+          "date": "2025-03-03",
+          "rank": 24961
+        },
+        {
+          "date": "2025-03-04",
+          "rank": 24957
+        },
+        {
+          "date": "2025-03-05",
+          "rank": 24954
+        },
+        {
+          "date": "2025-03-06",
+          "rank": 24951
+        },
+        {
+          "date": "2025-03-07",
+          "rank": 24950
+        },
+        {
+          "date": "2025-03-08",
+          "rank": 24946
+        },
+        {
+          "date": "2025-03-09",
+          "rank": 24942
+        },
+        {
+          "date": "2025-03-10",
+          "rank": 24943
+        },
+        {
+          "date": "2025-03-11",
+          "rank": 24943
+        },
+        {
+          "date": "2025-03-12",
+          "rank": 24942
+        },
+        {
+          "date": "2025-03-13",
+          "rank": 24944
+        },
+        {
+          "date": "2025-03-14",
+          "rank": 24941
+        },
+        {
+          "date": "2025-03-15",
+          "rank": 24946
+        },
+        {
+          "date": "2025-03-16",
+          "rank": 24950
+        },
+        {
+          "date": "2025-03-17",
+          "rank": 24952
+        },
+        {
+          "date": "2025-03-18",
+          "rank": 24953
+        },
+        {
+          "date": "2025-03-19",
+          "rank": 24956
+        },
+        {
+          "date": "2025-03-20",
+          "rank": 24958
+        },
+        {
+          "date": "2025-03-21",
+          "rank": 24960
+        },
+        {
+          "date": "2025-03-22",
+          "rank": 24963
+        },
+        {
+          "date": "2025-03-23",
+          "rank": 24963
+        },
+        {
+          "date": "2025-03-24",
+          "rank": 24961
+        },
+        {
+          "date": "2025-03-25",
+          "rank": 24959
+        }
+      ],
+      "country": [
+        {
+          "date": "2025-02-24",
+          "rank": 697,
+          "country": "gb"
+        },
+        {
+          "date": "2025-02-25",
+          "rank": 699.5,
+          "country": "gb"
+        },
+        {
+          "date": "2025-02-26",
+          "rank": 700,
+          "country": "gb"
+        },
+        {
+          "date": "2025-02-27",
+          "rank": 704,
+          "country": "gb"
+        },
+        {
+          "date": "2025-02-28",
+          "rank": 702.5,
+          "country": "gb"
+        },
+        {
+          "date": "2025-03-01",
+          "rank": 704,
+          "country": "gb"
+        },
+        {
+          "date": "2025-03-02",
+          "rank": 702,
+          "country": "gb"
+        },
+        {
+          "date": "2025-03-03",
+          "rank": 703.5,
+          "country": "gb"
+        },
+        {
+          "date": "2025-03-04",
+          "rank": 700.5,
+          "country": "gb"
+        },
+        {
+          "date": "2025-03-05",
+          "rank": 699,
+          "country": "gb"
+        },
+        {
+          "date": "2025-03-06",
+          "rank": 697.5,
+          "country": "gb"
+        },
+        {
+          "date": "2025-03-07",
+          "rank": 698,
+          "country": "gb"
+        },
+        {
+          "date": "2025-03-08",
+          "rank": 695,
+          "country": "gb"
+        },
+        {
+          "date": "2025-03-09",
+          "rank": 692.5,
+          "country": "gb"
+        },
+        {
+          "date": "2025-03-10",
+          "rank": 694.5,
+          "country": "gb"
+        },
+        {
+          "date": "2025-03-11",
+          "rank": 695,
+          "country": "gb"
+        },
+        {
+          "date": "2025-03-12",
+          "rank": 694,
+          "country": "gb"
+        },
+        {
+          "date": "2025-03-13",
+          "rank": 695.5,
+          "country": "gb"
+        },
+        {
+          "date": "2025-03-14",
+          "rank": 692,
+          "country": "gb"
+        },
+        {
+          "date": "2025-03-15",
+          "rank": 696,
+          "country": "gb"
+        },
+        {
+          "date": "2025-03-16",
+          "rank": 698.5,
+          "country": "gb"
+        },
+        {
+          "date": "2025-03-17",
+          "rank": 699,
+          "country": "gb"
+        },
+        {
+          "date": "2025-03-18",
+          "rank": 698.5,
+          "country": "gb"
+        },
+        {
+          "date": "2025-03-19",
+          "rank": 700,
+          "country": "gb"
+        },
+        {
+          "date": "2025-03-20",
+          "rank": 701,
+          "country": "gb"
+        },
+        {
+          "date": "2025-03-21",
+          "rank": 702.5,
+          "country": "gb"
+        },
+        {
+          "date": "2025-03-22",
+          "rank": 705,
+          "country": "gb"
+        },
+        {
+          "date": "2025-03-23",
+          "rank": 705,
+          "country": "gb"
+        },
+        {
+          "date": "2025-03-24",
+          "rank": 703.5,
+          "country": "gb"
+        },
+        {
+          "date": "2025-03-25",
+          "rank": 702.5,
+          "country": "gb"
+        }
+      ],
+      "region": [
+        {
+          "date": "2025-02-24",
+          "rank": 3972,
+          "region": "Unknown"
+        },
+        {
+          "date": "2025-02-25",
+          "rank": 3974,
+          "region": "Unknown"
+        },
+        {
+          "date": "2025-02-26",
+          "rank": 3974,
+          "region": "Unknown"
+        },
+        {
+          "date": "2025-02-27",
+          "rank": 3977.6666666666665,
+          "region": "Unknown"
+        },
+        {
+          "date": "2025-02-28",
+          "rank": 3976,
+          "region": "Unknown"
+        },
+        {
+          "date": "2025-03-01",
+          "rank": 3977.3333333333335,
+          "region": "Unknown"
+        },
+        {
+          "date": "2025-03-02",
+          "rank": 3975.3333333333335,
+          "region": "Unknown"
+        },
+        {
+          "date": "2025-03-03",
+          "rank": 3977,
+          "region": "Unknown"
+        },
+        {
+          "date": "2025-03-04",
+          "rank": 3974.3333333333335,
+          "region": "Unknown"
+        },
+        {
+          "date": "2025-03-05",
+          "rank": 3973.3333333333335,
+          "region": "Unknown"
+        },
+        {
+          "date": "2025-03-06",
+          "rank": 3972.3333333333335,
+          "region": "Unknown"
+        },
+        {
+          "date": "2025-03-07",
+          "rank": 3973.3333333333335,
+          "region": "Unknown"
+        },
+        {
+          "date": "2025-03-08",
+          "rank": 3970.6666666666665,
+          "region": "Unknown"
+        },
+        {
+          "date": "2025-03-09",
+          "rank": 3968.6666666666665,
+          "region": "Unknown"
+        },
+        {
+          "date": "2025-03-10",
+          "rank": 3971,
+          "region": "Unknown"
+        },
+        {
+          "date": "2025-03-11",
+          "rank": 3971.6666666666665,
+          "region": "Unknown"
+        },
+        {
+          "date": "2025-03-12",
+          "rank": 3970.6666666666665,
+          "region": "Unknown"
+        },
+        {
+          "date": "2025-03-13",
+          "rank": 3972,
+          "region": "Unknown"
+        },
+        {
+          "date": "2025-03-14",
+          "rank": 3968.3333333333335,
+          "region": "Unknown"
+        },
+        {
+          "date": "2025-03-15",
+          "rank": 3972,
+          "region": "Unknown"
+        },
+        {
+          "date": "2025-03-16",
+          "rank": 3974,
+          "region": "Unknown"
+        },
+        {
+          "date": "2025-03-17",
+          "rank": 3974,
+          "region": "Unknown"
+        },
+        {
+          "date": "2025-03-18",
+          "rank": 3973,
+          "region": "Unknown"
+        },
+        {
+          "date": "2025-03-19",
+          "rank": 3974,
+          "region": "Unknown"
+        },
+        {
+          "date": "2025-03-20",
+          "rank": 3974.6666666666665,
+          "region": "Unknown"
+        },
+        {
+          "date": "2025-03-21",
+          "rank": 3976,
+          "region": "Unknown"
+        },
+        {
+          "date": "2025-03-22",
+          "rank": 3978.3333333333335,
+          "region": "Unknown"
+        },
+        {
+          "date": "2025-03-23",
+          "rank": 3978.3333333333335,
+          "region": "Unknown"
+        },
+        {
+          "date": "2025-03-24",
+          "rank": 3977,
+          "region": "Unknown"
+        },
+        {
+          "date": "2025-03-25",
+          "rank": 3976.3333333333335,
+          "region": "Unknown"
+        }
+      ]
+    },
+    "percentiles": {
+      "global": 98.3084274225806,
+      "country": 99.95267854358387,
+      "region": 99.9730647354812
+    },
+    "firstTracked": "2025-02-24"
+  },
+  "scenarioPerformance": {
+    "username": "xrageblaze@gmail.com",
+    "totalScenarios": 10,
+    "scenarioDetails": [
+      {
+        "leaderboardId": "118",
+        "scenarioName": "voxTargetSwitch",
+        "plays": 36,
+        "bestScore": 96,
+        "rank": 9489,
+        "dateLastPlayed": "2025-03-26T23:58:28.431Z",
+        "metadata": {
+          "popularity": 2297939,
+          "totalPlays": 104317,
+          "aimType": "Target Switching",
+          "authors": [
+            "voxel"
+          ],
+          "description": "Inspiration from BF4 test range, go as fast as you can."
+        }
+      },
+      {
+        "leaderboardId": "11958",
+        "scenarioName": "Tamspeed 2bp Platinum",
+        "plays": 36,
+        "bestScore": 124,
+        "rank": 6351,
+        "dateLastPlayed": "2025-03-26T23:58:28.720Z",
+        "metadata": {
+          "popularity": 0,
+          "totalPlays": 0,
+          "aimType": null,
+          "authors": [],
+          "description": ""
+        }
+      },
+      {
+        "leaderboardId": "29493",
+        "scenarioName": "VT Pasu Rasp Intermediate",
+        "plays": 36,
+        "bestScore": 870,
+        "rank": 14622,
+        "dateLastPlayed": "2025-03-26T23:58:28.431Z",
+        "metadata": {
+          "popularity": 3011778,
+          "totalPlays": 93355,
+          "aimType": "Clicking",
+          "authors": [
+            "Fuglaa",
+            "Pauer",
+            "Tammas",
+            "Raspberry/Vodkards"
+          ],
+          "description": "Single-click bots travel in straight lines at various angles on an X/Y Plane, while making unpredictable directional changes and colliding with walls. The player's weapon has three shots and empty magazines recover per bullet."
+        }
+      },
+      {
+        "leaderboardId": "2102",
+        "scenarioName": "Smoothsphere Easy",
+        "plays": 33,
+        "bestScore": 12204,
+        "rank": 6545,
+        "dateLastPlayed": "2025-03-26T23:58:29.026Z",
+        "metadata": {
+          "popularity": 0,
+          "totalPlays": 0,
+          "aimType": null,
+          "authors": [],
+          "description": ""
+        }
+      },
+      {
+        "leaderboardId": "11921",
+        "scenarioName": "Controlsphere Platinum",
+        "plays": 33,
+        "bestScore": 14469,
+        "rank": 5589,
+        "dateLastPlayed": "2025-03-26T23:58:29.026Z",
+        "metadata": {
+          "popularity": 0,
+          "totalPlays": 0,
+          "aimType": null,
+          "authors": [],
+          "description": ""
+        }
+      },
+      {
+        "leaderboardId": "24952",
+        "scenarioName": "VT Smoothbot Intermediate",
+        "plays": 31,
+        "bestScore": 3559,
+        "rank": 14567,
+        "dateLastPlayed": "2025-03-26T23:58:28.432Z",
+        "metadata": {
+          "popularity": 3162966,
+          "totalPlays": 86971,
+          "aimType": "Tracking",
+          "authors": [
+            "Xytaglyph",
+            "Sackboy_Clank5",
+            "Tammas",
+            "Pauer",
+            "Raspberry/Vodkards"
+          ],
+          "description": "One invincible thin bot makes long and short strafes in a three dimensional space at various frequencies with smooth transitions between them."
+        }
+      },
+      {
+        "leaderboardId": "103209",
+        "scenarioName": "VT 1w3ts Intermediate S5",
+        "plays": 31,
+        "bestScore": 1167.36,
+        "rank": 4547,
+        "dateLastPlayed": "2025-03-26T23:58:29.025Z",
+        "metadata": {
+          "popularity": 0,
+          "totalPlays": 0,
+          "aimType": null,
+          "authors": [],
+          "description": ""
+        }
+      },
+      {
+        "leaderboardId": "24964",
+        "scenarioName": "VT skyTS Intermediate",
+        "plays": 29,
+        "bestScore": 1230,
+        "rank": 5305,
+        "dateLastPlayed": "2025-03-26T23:58:28.432Z",
+        "metadata": {
+          "popularity": 1620769,
+          "totalPlays": 67991,
+          "aimType": "Target Switching",
+          "authors": [
+            "voxel",
+            "fallen",
+            "Whisper",
+            "Raspberry/Vodkards"
+          ],
+          "description": "Bots move in slow horizontal lines in a rectangular prism at various depths and need to be tracked for a short period to be eliminated. Horizontal direction changes are very slow and predictable."
+        }
+      },
+      {
+        "leaderboardId": "103353",
+        "scenarioName": "VT Controlsphere Intermediate S5",
+        "plays": 29,
+        "bestScore": 3164,
+        "rank": 3231,
+        "dateLastPlayed": "2025-03-26T23:58:29.025Z",
+        "metadata": {
+          "popularity": 0,
+          "totalPlays": 0,
+          "aimType": null,
+          "authors": [],
+          "description": ""
+        }
+      },
+      {
+        "leaderboardId": "600",
+        "scenarioName": "patTargetSwitch easy",
+        "plays": 28,
+        "bestScore": 8380,
+        "rank": 3120,
+        "dateLastPlayed": "2025-03-26T23:58:29.026Z",
+        "metadata": {
+          "popularity": 0,
+          "totalPlays": 0,
+          "aimType": null,
+          "authors": [],
+          "description": ""
+        }
+      }
+    ]
+  },
+  "benchmarkProgress": {
+    "username": "xrageblaze@gmail.com",
+    "overallProgress": 0.704,
+    "overallRank": 0,
+    "categories": {
+      "Tracking": {
+        "progress": 0.704,
+        "rank": 0,
+        "scenarios": {
+          "B180TI Extra Small Sparky": {
+            "score": 105600,
+            "leaderboardRank": 15076,
+            "scenarioRank": 0
+          },
+          "Smooth ReactSphere": {
+            "score": 0,
+            "leaderboardRank": null,
+            "scenarioRank": 0
+          },
+          "B180TI Inverted Long Jump": {
+            "score": 0,
+            "leaderboardRank": null,
+            "scenarioRank": 0
+          },
+          "Glider GOATED Hard 50% smaller": {
+            "score": 0,
+            "leaderboardRank": null,
+            "scenarioRank": 0
+          }
+        }
+      }
+    },
+    "benchmarks": []
+  },
+  "activityTimeline": {
+    "username": "xrageblaze@gmail.com",
+    "totalActivities": 10,
+    "activities": [
+      {
+        "timestamp": "2025-03-26T19:12:01.691Z",
+        "scenarioName": "SYW (Smooth Your Wrist) Truly FIXED",
+        "score": 566,
+        "leaderboardId": 13150,
+        "scenarioDetails": {
+          "aimType": null,
+          "authors": [],
+          "description": "",
+          "popularity": 0,
+          "totalPlays": 0
+        }
+      },
+      {
+        "timestamp": "2025-03-24T17:43:23.724Z",
+        "scenarioName": "VT Aether Intermediate S5",
+        "score": 2429,
+        "leaderboardId": 101369,
+        "scenarioDetails": {
+          "aimType": null,
+          "authors": [],
+          "description": "",
+          "popularity": 0,
+          "totalPlays": 0
+        }
+      },
+      {
+        "timestamp": "2025-03-21T21:37:46.350Z",
+        "scenarioName": "VT Air Long Strafes Far Intermediate",
+        "score": 6204,
+        "leaderboardId": 110834,
+        "scenarioDetails": {
+          "aimType": null,
+          "authors": [],
+          "description": "",
+          "popularity": 0,
+          "totalPlays": 0
+        }
+      },
+      {
+        "timestamp": "2025-03-21T20:46:35.220Z",
+        "scenarioName": "VT Controlsphere Intermediate S5",
+        "score": 3164,
+        "leaderboardId": 103353,
+        "scenarioDetails": {
+          "aimType": null,
+          "authors": [],
+          "description": "",
+          "popularity": 0,
+          "totalPlays": 0
+        }
+      },
+      {
+        "timestamp": "2025-03-21T19:14:36.636Z",
+        "scenarioName": "Controlsphere Blink Intermediate",
+        "score": 5718,
+        "leaderboardId": 110207,
+        "scenarioDetails": {
+          "aimType": null,
+          "authors": [],
+          "description": "",
+          "popularity": 0,
+          "totalPlays": 0
+        }
+      },
+      {
+        "timestamp": "2025-03-21T19:09:21.914Z",
+        "scenarioName": "FuglaaXYZ Voltaic No Blinks Intermediate",
+        "score": 12880,
+        "leaderboardId": 113051,
+        "scenarioDetails": {
+          "aimType": null,
+          "authors": [],
+          "description": "",
+          "popularity": 0,
+          "totalPlays": 0
+        }
+      },
+      {
+        "timestamp": "2025-03-21T19:07:16.127Z",
+        "scenarioName": "PreciseSphere Intermediate",
+        "score": 7737,
+        "leaderboardId": 111340,
+        "scenarioDetails": {
+          "aimType": null,
+          "authors": [],
+          "description": "",
+          "popularity": 0,
+          "totalPlays": 0
+        }
+      },
+      {
+        "timestamp": "2025-03-20T19:53:06.349Z",
+        "scenarioName": "Prediction Cancelling - Midrange I",
+        "score": 2552,
+        "leaderboardId": 34489,
+        "scenarioDetails": {
+          "aimType": null,
+          "authors": [],
+          "description": "",
+          "popularity": 0,
+          "totalPlays": 0
+        }
+      },
+      {
+        "timestamp": "2025-03-20T19:50:49.754Z",
+        "scenarioName": "VT Closerange Long Strafes Intermediate",
+        "score": 7860,
+        "leaderboardId": 109718,
+        "scenarioDetails": {
+          "aimType": null,
+          "authors": [],
+          "description": "",
+          "popularity": 0,
+          "totalPlays": 0
+        }
+      },
+      {
+        "timestamp": "2025-03-20T19:44:38.685Z",
+        "scenarioName": "VT Midrange Short Strafes Intermediate",
+        "score": 4536,
+        "leaderboardId": 110831,
+        "scenarioDetails": {
+          "aimType": null,
+          "authors": [],
+          "description": "",
+          "popularity": 0,
+          "totalPlays": 0
+        }
+      }
+    ],
+    "metadata": {
+      "dateRange": {
+        "earliest": "2025-03-20T19:44:38.685Z",
+        "latest": "2025-03-26T19:12:01.691Z"
+      },
+      "scoreRange": {
+        "min": 566,
+        "max": 12880
+      },
+      "uniqueScenarios": [
+        "SYW (Smooth Your Wrist) Truly FIXED",
+        "VT Aether Intermediate S5",
+        "VT Air Long Strafes Far Intermediate",
+        "VT Controlsphere Intermediate S5",
+        "Controlsphere Blink Intermediate",
+        "FuglaaXYZ Voltaic No Blinks Intermediate",
+        "PreciseSphere Intermediate",
+        "Prediction Cancelling - Midrange I",
+        "VT Closerange Long Strafes Intermediate",
+        "VT Midrange Short Strafes Intermediate"
+      ],
+      "uniqueAimTypes": []
+    }
+  },
+  "regionalContext": {
+    "username": "xrageblaze@gmail.com",
+    "steamAccountName": "kyuri",
+    "steamId": "76561198409458631",
+    "playerRanking": {
+      "global": 24951,
+      "country": 698,
+      "region": 3973,
+      "countryName": "gb",
+      "regionName": "Europe"
+    },
+    "countryContext": {
+      "countryName": "gb",
+      "globalRank": null,
+      "totalPlayers": 1475018,
+      "topPlayers": [
+        {
+          "rank": 18,
+          "rankChange": 0,
+          "steamId": "",
+          "webappUsername": null,
+          "steamAccountName": "",
+          "points": "36772216",
+          "scenariosCount": "0",
+          "completionsCount": 0,
+          "kovaaksPlusActive": false,
+          "country": ""
+        }
+      ]
+    },
+    "regionContext": {
+      "regionName": "Europe",
+      "globalRank": null,
+      "totalPlayers": 7,
+      "topPlayers": []
+    }
+  },
+  "authStatus": {
+    "authenticated": false
+  },
+  "badges": [],
+  "followData": {
+    "following": 0,
+    "followers": 0
+  },
+  "socialMedia": {
+    "tiktok": null,
+    "twitch": null,
+    "discord": "ckyurii",
+    "twitter": null,
+    "youtube": null,
+    "discord_id": "934987217456209951"
+  },
+  "peripherals": {
+    "mouse": "Pulsar X2 V3",
+    "headset": null,
+    "monitor": null,
+    "keyboard": null,
+    "mousePad": "Aqua Control 2"
+  },
+  "kovaaksPlusDetails": {
+    "active": false,
+    "expiration": null
+  },
+  "userGameSettings": {
+    "dpi": null,
+    "fov": null,
+    "cm360": null,
+    "rawInput": "true",
+    "sensitivity": null
+  },
+  "steamIdSearchData": {
+    "steamId": "76561198409458631",
+    "rank": 24951,
+    "countryRank": 698,
+    "regionRank": 3973,
+    "rankChange": 0,
+    "countryRankChange": 0,
+    "regionRankChange": 0,
+    "username": "xrageblaze@gmail.com",
+    "steamAccountName": "kyuri",
+    "steamAccountAvatar": "https://avatars.steamstatic.com/d4b245bf50ac14190970b2b9cacf7e8762a70635_full.jpg",
+    "country": "gb",
+    "kovaaksPlusActive": false
+  },
+  "monthlyActiveUsers": 320337,
+  "globalPercentile": 92.21101527453901,
+  "countryPercentile": 99.95267854358387,
+  "regionPercentile": -56657.142857142855,
+  "scenarioPercentiles": {
+    "voxTargetSwitch": 90.90368779777026,
+    "VT Pasu Rasp Intermediate": 84.33720743398854,
+    "VT Smoothbot Intermediate": 83.2507387519978,
+    "VT skyTS Intermediate": 92.19749672750805
+  },
+  "gameSettingsGlobal": {
+    "SensitivityAndFov": [
+      {
+        "FOV": {
+          "FILMS": "4ML3",
+          "SliderMax": 140,
+          "SliderMin": 60
+        },
+        "Sens": {
+          "TypicalMaxCM": "40",
+          "TypicalMinCM": "15",
+          "InchesFormula": "360 / (Inches * 0.022 * DPI)",
+          "IncrementFormula": "Sens * 0.022"
+        },
+        "ScaleName": "Quake/Source"
+      },
+      {
+        "FOV": {
+          "FILMS": "16ML9",
+          "SliderMax": 140,
+          "SliderMin": 60
+        },
+        "Sens": {
+          "TypicalMaxCM": "40",
+          "TypicalMinCM": "15",
+          "InchesFormula": "360 / (Inches * 0.022 * DPI)",
+          "IncrementFormula": "Sens * 0.022"
+        },
+        "ScaleName": "Quake Champions"
+      },
+      {
+        "FOV": {
+          "FILMS": "16MF9",
+          "SliderMax": 103,
+          "SliderMin": 80
+        },
+        "Sens": {
+          "TypicalMaxCM": "45",
+          "TypicalMinCM": "20",
+          "InchesFormula": "360 / (Inches * 0.0066 * DPI)",
+          "IncrementFormula": "Sens * 0.0066"
+        },
+        "ScaleName": "Overwatch"
+      },
+      {
+        "FOV": {
+          "FILMS": "16MS9",
+          "SliderMax": 103,
+          "SliderMin": 103
+        },
+        "Sens": {
+          "TypicalMaxCM": "71",
+          "TypicalMinCM": "36",
+          "InchesFormula": "360 / (Inches * 0.06996 * DPI)",
+          "IncrementFormula": "Sens * 0.06996"
+        },
+        "ScaleName": "Valorant"
+      },
+      {
+        "FOV": {
+          "FILMS": "4ML3",
+          "SliderMax": 140,
+          "SliderMin": 60
+        },
+        "Sens": {
+          "TypicalMaxCM": "48",
+          "TypicalMinCM": "20",
+          "InchesFormula": "360 / (Inches * 0.022 * DPI)",
+          "IncrementFormula": "Sens * 0.022"
+        },
+        "ScaleName": "Apex Legends"
+      },
+      {
+        "FOV": {
+          "FILMS": "16ML9",
+          "SliderMax": 80,
+          "SliderMin": 80
+        },
+        "Sens": {
+          "TypicalMaxCM": "41",
+          "TypicalMinCM": "22",
+          "InchesFormula": "360 / (Inches * 0.005555 * DPI)",
+          "IncrementFormula": "Sens * 0.005555"
+        },
+        "ScaleName": "Fortnite"
+      },
+      {
+        "FOV": {
+          "FILMS": "16MI9",
+          "SliderMax": 80,
+          "SliderMin": 80
+        },
+        "ScaleName": "Fortnite Legacy"
+      },
+      {
+        "FOV": {
+          "FILMS": "16ML9",
+          "SliderMax": 140,
+          "SliderMin": 60
+        },
+        "Sens": {
+          "TypicalMaxCM": "40",
+          "TypicalMinCM": "20",
+          "InchesFormula": "360 / (Inches * 0.104156 * FOV * 0.001 * DPI)",
+          "IncrementFormula": "Sens * 0.104156 * FOV * 0.001"
+        },
+        "ScaleName": "Splitgate"
+      },
+      {
+        "FOV": {
+          "FILMS": "4ML3",
+          "SliderMax": 90,
+          "SliderMin": 90
+        },
+        "Sens": {
+          "TypicalMaxCM": "65",
+          "TypicalMinCM": "33",
+          "InchesFormula": "360 / (Inches * 0.022 * DPI)",
+          "IncrementFormula": "Sens * 0.022"
+        },
+        "ScaleName": "Counter-Strike"
+      },
+      {
+        "FOV": {
+          "FILMS": "16MF9",
+          "SliderMax": 103,
+          "SliderMin": 80
+        },
+        "Sens": {
+          "TypicalMaxCM": "48",
+          "TypicalMinCM": "20",
+          "InchesFormula": "360 / (Inches * 0.0066 * DPI)",
+          "IncrementFormula": "Sens * 0.0066"
+        },
+        "ScaleName": "Call of Duty"
+      },
+      {
+        "FOV": {
+          "FILMS": "vML",
+          "SliderMax": 115,
+          "SliderMin": 60
+        },
+        "Sens": {
+          "InchesFormula": "360 / (Inches * 0.018 / _pi * DPI)",
+          "IncrementFormula": "Sens * 0.018 / _pi"
+        },
+        "ScaleName": "Rainbow 6: Siege"
+      },
+      {
+        "FOV": {
+          "FILMS": "vML",
+          "SliderMax": 115,
+          "SliderMin": 60
+        },
+        "Sens": {
+          "TypicalMaxCM": "40",
+          "TypicalMinCM": "15",
+          "InchesFormula": "360 / (Inches / 60 * DPI)",
+          "IncrementFormula": "Sens / 60"
+        },
+        "ScaleName": "Diabotical"
+      },
+      {
+        "FOV": {
+          "FILMS": "16MF9",
+          "SliderMax": 103,
+          "SliderMin": 80
+        },
+        "Sens": {
+          "TypicalMaxCM": "45",
+          "TypicalMinCM": "20",
+          "InchesFormula": "360 / (Inches * 0.0066 * DPI)",
+          "IncrementFormula": "Sens * 0.0066"
+        },
+        "ScaleName": "Destiny 2"
+      },
+      {
+        "FOV": {
+          "FILMS": "16ML9",
+          "SliderMax": 140,
+          "SliderMin": 60
+        },
+        "Sens": {
+          "InchesFormula": "(360 - 0.011459162 * DPI * Inches) / (DPI * Inches * 0.0034377486)",
+          "IncrementFormula": "(Sens * 0.0034377486) + 0.011459162"
+        },
+        "ScaleName": "Battlefield V/1/Hardline"
+      },
+      {
+        "FOV": {
+          "FILMS": "16ML9",
+          "SliderMax": 140,
+          "SliderMin": 60
+        },
+        "Sens": {
+          "TypicalMaxCM": "45",
+          "TypicalMinCM": "20",
+          "InchesFormula": "360 / (Inches * 0.091176 * FOV * 0.001 * DPI)",
+          "IncrementFormula": "Sens * 0.091176 * FOV * 0.001"
+        },
+        "ScaleName": "Paladins"
+      },
+      {
+        "FOV": {
+          "FILMS": "16ML9",
+          "SliderMax": 140,
+          "SliderMin": 60
+        },
+        "Sens": {
+          "InchesFormula": "360 / (Inches * 0.022222 * DPI)",
+          "IncrementFormula": "Sens * 0.022222"
+        },
+        "ScaleName": "Halo"
+      },
+      {
+        "FOV": {
+          "FILMS": "16ML9",
+          "SliderMax": 140,
+          "SliderMin": 60
+        },
+        "Sens": {
+          "InchesFormula": "360 / (Inches * 0.1125 * DPI)",
+          "IncrementFormula": "Sens * 0.1125"
+        },
+        "ScaleName": "Rust"
+      },
+      {
+        "FOV": {
+          "FILMS": "4ML3",
+          "SliderMax": 140,
+          "SliderMin": 60
+        },
+        "Sens": {
+          "TypicalMaxCM": "40",
+          "TypicalMinCM": "15",
+          "InchesFormula": "360 / (Inches * 0.018 / _pi * DPI)",
+          "IncrementFormula": "Sens * 0.018 / _pi"
+        },
+        "ScaleName": "Reflex Arena"
+      },
+      {
+        "FOV": {
+          "FILMS": "hML",
+          "SliderMax": 140,
+          "SliderMin": 60
+        },
+        "Sens": {
+          "InchesFormula": "360 / (Inches * 0.017501 * DPI)",
+          "IncrementFormula": "Sens * 0.017501"
+        },
+        "ScaleName": "Batallion"
+      },
+      {
+        "FOV": {
+          "FILMS": "hML",
+          "SliderMax": 140,
+          "SliderMin": 60
+        },
+        "Sens": {
+          "InchesFormula": "360 / (Inches * 0.07 * DPI)",
+          "IncrementFormula": "Sens * 0.07"
+        },
+        "ScaleName": "UE4"
+      },
+      {
+        "FOV": {
+          "FILMS": "16ML9",
+          "SliderMax": 140,
+          "SliderMin": 60
+        },
+        "Sens": {
+          "IncrementFormula": "0.00005555 * 10 ^ (Sens / 50) * FOV"
+        },
+        "ScaleName": "PUBG"
+      },
+      {
+        "Sens": {
+          "InchesFormula": "360 / (Inches * 0.0429718162181364 * DPI)",
+          "IncrementFormula": "Sens * 0.0429718162181364"
+        },
+        "ScaleName": "Hunt: Showdown"
+      },
+      {
+        "Sens": {
+          "TypicalMaxCM": "45",
+          "TypicalMinCM": "20",
+          "InchesFormula": "360 / (Inches * 0.0003888500001 * DPI)",
+          "IncrementFormula": "Sens * 0.0003888500001"
+        },
+        "ScaleName": "Gundam Evolution"
+      },
+      {
+        "FOV": {
+          "FILMS": "vML",
+          "SliderMax": 100,
+          "SliderMin": 45
+        },
+        "Sens": {
+          "InchesFormula": "360 / (Inches * 0.00101545 * DPI)",
+          "IncrementFormula": "Sens * 0.00101545"
+        },
+        "ScaleName": "The FINALS"
+      },
+      {
+        "Sens": {
+          "InchesFormula": "360 / (Inches * 1.01061008 * DPI)",
+          "IncrementFormula": "Sens * 1.01061008"
+        },
+        "ScaleName": "Roblox"
+      },
+      {
+        "Sens": {
+          "InchesFormula": "360 / (Inches * 0.375 * DPI)",
+          "IncrementFormula": "Sens * 0.375"
+        },
+        "ScaleName": "Roblox Arsenal"
+      },
+      {
+        "Sens": {
+          "InchesFormula": "360 / (Inches * 0.0175 * DPI)",
+          "IncrementFormula": "Sens * 0.0175"
+        },
+        "ScaleName": "Marvel Rivals"
+      },
+      {
+        "Sens": {
+          "InchesFormula": "360 / (Inches * 0.044 * DPI)",
+          "IncrementFormula": "Sens * 0.044"
+        },
+        "ScaleName": "Deadlock"
+      },
+      {
+        "FOV": {
+          "FILMS": "4ML3",
+          "SliderMax": 90,
+          "SliderMin": 90
+        },
+        "Sens": {
+          "InchesFormula": "360 / (Inches * 0.022 * DPI)",
+          "IncrementFormula": "Sens * 0.022"
+        },
+        "ScaleName": "CSGO"
+      },
+      {
+        "Sens": {
+          "InchesFormula": "360 / (Inches * 0.05555 * DPI)",
+          "IncrementFormula": "Sens * 0.05555"
+        },
+        "ScaleName": "Fragpunk"
+      },
+      {
+        "Sens": {
+          "InchesFormula": "(360 - 0.032809* DPI * Inches) / (DPI * Inches * 0.005446 )",
+          "IncrementFormula": "Sens * 0.005446 + 0.032809"
+        },
+        "ScaleName": "GTA 5"
+      },
+      {
+        "Sens": {
+          "IncrementFormula": "2.54 * 360 / (Sens * DPI)"
+        },
+        "ScaleName": "cm/360"
+      },
+      {
+        "Sens": {
+          "IncrementFormula": "360 / (Sens * DPI)"
+        },
+        "ScaleName": "in/360"
+      },
+      {
+        "FOV": {
+          "FILMS": "16ML9",
+          "SliderMax": 140,
+          "SliderMin": 60
+        },
+        "ScaleName": "Horizontal (16:9)"
+      },
+      {
+        "FOV": {
+          "FILMS": "4ML3",
+          "SliderMax": 140,
+          "SliderMin": 60
+        },
+        "ScaleName": "Horizontal (4:3)"
+      },
+      {
+        "FOV": {
+          "FILMS": "vML",
+          "SliderMax": 115,
+          "SliderMin": 60
+        },
+        "ScaleName": "Vertical (1:1)"
+      },
+      {
+        "FOV": {
+          "FILMS": "hML",
+          "SliderMax": 140,
+          "SliderMin": 60
+        },
+        "ScaleName": "Clamped Horizontal"
+      }
+    ]
+  },
+  "allBenchmarks": [
+    {
+      "benchmarkName": "Temeski tracking V2",
+      "benchmarkId": 71,
+      "benchmarkIcon": "https://storage.googleapis.com/cdn_dev/benchmarks/icons/BM_01.svg",
+      "benchmarkAuthor": "Temeski",
+      "type": "benchmark",
+      "tintRanks": false,
+      "rankName": "No Rank",
+      "rankIcon": "https://storage.googleapis.com/cdn_dev/benchmarks/ranks/KvK/Rank00.svg",
+      "rankColor": "#424242"
+    },
+    {
+      "benchmarkName": "AIMERZ+ EASY S1",
+      "benchmarkId": 84,
+      "benchmarkIcon": "https://storage.googleapis.com/cdn_dev/benchmarks/icons/BM_14.svg",
+      "benchmarkAuthor": "wa11p1per the creator",
+      "type": "benchmark",
+      "tintRanks": true,
+      "rankName": "No Rank",
+      "rankIcon": "https://storage.googleapis.com/cdn_dev/benchmarks/ranks/KvK/Rank00.svg",
+      "rankColor": "#424242"
+    },
+    {
+      "benchmarkName": "e1se Tracking",
+      "benchmarkId": 85,
+      "benchmarkIcon": "https://storage.googleapis.com/cdn_dev/benchmarks/icons/BM_01.svg",
+      "benchmarkAuthor": "DrUninstall",
+      "type": "workout",
+      "tintRanks": false,
+      "rankName": "0/5",
+      "rankIcon": "https://storage.googleapis.com/cdn_dev/benchmarks/ranks/KvK/Rank00.svg",
+      "rankColor": "#FF912F"
+    },
+    {
+      "benchmarkName": "AIMERZ+ HARD S1",
+      "benchmarkId": 90,
+      "benchmarkIcon": "https://storage.googleapis.com/cdn_dev/benchmarks/icons/BM_16.svg",
+      "benchmarkAuthor": "wa11p1per the creator",
+      "type": "benchmark",
+      "tintRanks": true,
+      "rankName": "No Rank",
+      "rankIcon": "https://storage.googleapis.com/cdn_dev/benchmarks/ranks/KvK/Rank00.svg",
+      "rankColor": "#424242"
+    },
+    {
+      "benchmarkName": "Mariflax ....",
+      "benchmarkId": 138,
+      "benchmarkIcon": "https://storage.googleapis.com/cdn_dev/benchmarks/icons/BM_01.svg",
+      "benchmarkAuthor": "MariFlax",
+      "type": "benchmark",
+      "tintRanks": false,
+      "rankName": "No Rank",
+      "rankIcon": "https://storage.googleapis.com/cdn_dev/benchmarks/ranks/KvK/Rank00.svg",
+      "rankColor": "#424242"
+    },
+    {
+      "benchmarkName": "Temeski Movement Tracking 4",
+      "benchmarkId": 150,
+      "benchmarkIcon": "https://storage.googleapis.com/cdn_dev/benchmarks/icons/BM_16.svg",
+      "benchmarkAuthor": "Temeski",
+      "type": "benchmark",
+      "tintRanks": false,
+      "rankName": "No Rank",
+      "rankIcon": "https://storage.googleapis.com/cdn_dev/benchmarks/ranks/KvK/Rank00.svg",
+      "rankColor": "#424242"
+    },
+    {
+      "benchmarkName": "Simple Tracking",
+      "benchmarkId": 164,
+      "benchmarkIcon": "https://storage.googleapis.com/cdn_dev/benchmarks/icons/BM_01.svg",
+      "benchmarkAuthor": "星川みつき",
+      "type": "benchmark",
+      "tintRanks": true,
+      "rankName": "No Rank",
+      "rankIcon": "https://storage.googleapis.com/cdn_dev/benchmarks/ranks/KvK/Rank00.svg",
+      "rankColor": "#424242"
+    },
+    {
+      "benchmarkName": "Shimmy Static Benchmarks",
+      "benchmarkId": 194,
+      "benchmarkIcon": "https://storage.googleapis.com/cdn_dev/benchmarks/icons/BM_09.svg",
+      "benchmarkAuthor": "shimmy",
+      "type": "benchmark",
+      "tintRanks": true,
+      "rankName": "No Rank",
+      "rankIcon": "https://storage.googleapis.com/cdn_dev/benchmarks/ranks/KvK/Rank00.svg",
+      "rankColor": "#424242"
+    },
+    {
+      "benchmarkName": "TSK Benchmarks",
+      "benchmarkId": 227,
+      "benchmarkIcon": "https://storage.googleapis.com/cdn_dev/benchmarks/icons/BM_01.svg",
+      "benchmarkAuthor": "tsk",
+      "type": "benchmark",
+      "tintRanks": true,
+      "rankName": "No Rank",
+      "rankIcon": "https://storage.googleapis.com/cdn_dev/benchmarks/ranks/KvK/Rank00.svg",
+      "rankColor": "#424242"
+    },
+    {
+      "benchmarkName": "Voltaic Benchmarks INT S4",
+      "benchmarkId": 235,
+      "benchmarkIcon": "https://storage.googleapis.com/cdn_dev/benchmarks/icons/BM_01.svg",
+      "benchmarkAuthor": "Shishigami",
+      "type": "benchmark",
+      "tintRanks": true,
+      "rankName": "No Rank",
+      "rankIcon": "https://storage.googleapis.com/cdn_dev/benchmarks/ranks/KvK/Rank00.svg",
+      "rankColor": "#ffffff"
+    }
+  ],
+  "scenarioHistory": [
+    {
+      "timestamp": "2025-03-26T19:12:01.691Z",
+      "type": "HIGH_SCORE",
+      "scenarioName": "SYW (Smooth Your Wrist) Truly FIXED",
+      "score": 566,
+      "leaderboardId": 13150,
+      "username": "xrageblaze@gmail.com",
+      "webappUsername": "xrageblaze@gmail.com",
+      "steamId": "76561198409458631",
+      "steamAccountName": "kyuri",
+      "steamAccountAvatar": "https://avatars.steamstatic.com/d4b245bf50ac14190970b2b9cacf7e8762a70635_full.jpg",
+      "country": "gb",
+      "kovaaksPlus": false
+    },
+    {
+      "timestamp": "2025-03-24T17:43:23.724Z",
+      "type": "HIGH_SCORE",
+      "scenarioName": "VT Aether Intermediate S5",
+      "score": 2429,
+      "leaderboardId": 101369,
+      "username": "xrageblaze@gmail.com",
+      "webappUsername": "xrageblaze@gmail.com",
+      "steamId": "76561198409458631",
+      "steamAccountName": "kyuri",
+      "steamAccountAvatar": "https://avatars.steamstatic.com/d4b245bf50ac14190970b2b9cacf7e8762a70635_full.jpg",
+      "country": "gb",
+      "kovaaksPlus": false
+    },
+    {
+      "timestamp": "2025-03-21T21:37:46.350Z",
+      "type": "HIGH_SCORE",
+      "scenarioName": "VT Air Long Strafes Far Intermediate",
+      "score": 6204,
+      "leaderboardId": 110834,
+      "username": "xrageblaze@gmail.com",
+      "webappUsername": "xrageblaze@gmail.com",
+      "steamId": "76561198409458631",
+      "steamAccountName": "kyuri",
+      "steamAccountAvatar": "https://avatars.steamstatic.com/58af7e6780daad32102080538cf1c8fac7894638_full.jpg",
+      "country": "gb",
+      "kovaaksPlus": false
+    },
+    {
+      "timestamp": "2025-03-21T20:46:35.220Z",
+      "type": "HIGH_SCORE",
+      "scenarioName": "VT Controlsphere Intermediate S5",
+      "score": 3164,
+      "leaderboardId": 103353,
+      "username": "xrageblaze@gmail.com",
+      "webappUsername": "xrageblaze@gmail.com",
+      "steamId": "76561198409458631",
+      "steamAccountName": "kyuri",
+      "steamAccountAvatar": "https://avatars.steamstatic.com/58af7e6780daad32102080538cf1c8fac7894638_full.jpg",
+      "country": "gb",
+      "kovaaksPlus": false
+    },
+    {
+      "timestamp": "2025-03-21T19:14:36.636Z",
+      "type": "HIGH_SCORE",
+      "scenarioName": "Controlsphere Blink Intermediate",
+      "score": 5718,
+      "leaderboardId": 110207,
+      "username": "xrageblaze@gmail.com",
+      "webappUsername": "xrageblaze@gmail.com",
+      "steamId": "76561198409458631",
+      "steamAccountName": "kyuri",
+      "steamAccountAvatar": "https://avatars.steamstatic.com/58af7e6780daad32102080538cf1c8fac7894638_full.jpg",
+      "country": "gb",
+      "kovaaksPlus": false
+    },
+    {
+      "timestamp": "2025-03-21T19:09:21.914Z",
+      "type": "HIGH_SCORE",
+      "scenarioName": "FuglaaXYZ Voltaic No Blinks Intermediate",
+      "score": 12880,
+      "leaderboardId": 113051,
+      "username": "xrageblaze@gmail.com",
+      "webappUsername": "xrageblaze@gmail.com",
+      "steamId": "76561198409458631",
+      "steamAccountName": "kyuri",
+      "steamAccountAvatar": "https://avatars.steamstatic.com/58af7e6780daad32102080538cf1c8fac7894638_full.jpg",
+      "country": "gb",
+      "kovaaksPlus": false
+    },
+    {
+      "timestamp": "2025-03-21T19:07:16.127Z",
+      "type": "HIGH_SCORE",
+      "scenarioName": "PreciseSphere Intermediate",
+      "score": 7737,
+      "leaderboardId": 111340,
+      "username": "xrageblaze@gmail.com",
+      "webappUsername": "xrageblaze@gmail.com",
+      "steamId": "76561198409458631",
+      "steamAccountName": "kyuri",
+      "steamAccountAvatar": "https://avatars.steamstatic.com/58af7e6780daad32102080538cf1c8fac7894638_full.jpg",
+      "country": "gb",
+      "kovaaksPlus": false
+    },
+    {
+      "timestamp": "2025-03-20T19:53:06.349Z",
+      "type": "HIGH_SCORE",
+      "scenarioName": "Prediction Cancelling - Midrange I",
+      "score": 2552,
+      "leaderboardId": 34489,
+      "username": "xrageblaze@gmail.com",
+      "webappUsername": "xrageblaze@gmail.com",
+      "steamId": "76561198409458631",
+      "steamAccountName": "kyuri",
+      "steamAccountAvatar": "https://avatars.steamstatic.com/58af7e6780daad32102080538cf1c8fac7894638_full.jpg",
+      "country": "gb",
+      "kovaaksPlus": false
+    },
+    {
+      "timestamp": "2025-03-20T19:50:49.754Z",
+      "type": "HIGH_SCORE",
+      "scenarioName": "VT Closerange Long Strafes Intermediate",
+      "score": 7860,
+      "leaderboardId": 109718,
+      "username": "xrageblaze@gmail.com",
+      "webappUsername": "xrageblaze@gmail.com",
+      "steamId": "76561198409458631",
+      "steamAccountName": "kyuri",
+      "steamAccountAvatar": "https://avatars.steamstatic.com/58af7e6780daad32102080538cf1c8fac7894638_full.jpg",
+      "country": "gb",
+      "kovaaksPlus": false
+    },
+    {
+      "timestamp": "2025-03-20T19:44:38.685Z",
+      "type": "HIGH_SCORE",
+      "scenarioName": "VT Midrange Short Strafes Intermediate",
+      "score": 4536,
+      "leaderboardId": 110831,
+      "username": "xrageblaze@gmail.com",
+      "webappUsername": "xrageblaze@gmail.com",
+      "steamId": "76561198409458631",
+      "steamAccountName": "kyuri",
+      "steamAccountAvatar": "https://avatars.steamstatic.com/58af7e6780daad32102080538cf1c8fac7894638_full.jpg",
+      "country": "gb",
+      "kovaaksPlus": false
+    }
+  ],
+  "trendingScenarios": [
+    {
+      "scenarioName": "VT Snake Track Elite Hard Entry Size",
+      "leaderboardId": 114924,
+      "webappUsername": "Corporate Serf",
+      "steamAccountName": "TSK Serf",
+      "kovaaksPlusActive": false,
+      "entries": 45,
+      "new": true
+    },
+    {
+      "scenarioName": "VT Snake Track Elite Novice Size",
+      "leaderboardId": 114927,
+      "webappUsername": "Corporate Serf",
+      "steamAccountName": "TSK Serf",
+      "kovaaksPlusActive": false,
+      "entries": 37,
+      "new": true
+    },
+    {
+      "scenarioName": "VT Snake Track Advanced Intermediate Size",
+      "leaderboardId": 114926,
+      "webappUsername": "Corporate Serf",
+      "steamAccountName": "TSK Serf",
+      "kovaaksPlusActive": false,
+      "entries": 34,
+      "new": true
+    },
+    {
+      "scenarioName": "1w4ts Micro++",
+      "leaderboardId": 16114,
+      "webappUsername": "Dokkie",
+      "steamAccountName": "Dokkie",
+      "kovaaksPlusActive": false,
+      "new": false,
+      "entries": 1405
+    },
+    {
+      "scenarioName": "Reflex Poke-Micro++ Regenerating Goated",
+      "leaderboardId": 1030,
+      "webappUsername": null,
+      "steamAccountName": "by",
+      "kovaaksPlusActive": false,
+      "new": false,
+      "entries": 4800
+    },
+    {
+      "scenarioName": "Amare FlickerXYZ Headshot Small",
+      "leaderboardId": 59775,
+      "webappUsername": "Skylr",
+      "steamAccountName": "Amare",
+      "kovaaksPlusActive": false,
+      "new": false,
+      "entries": 1547
+    },
+    {
+      "scenarioName": "cA fuglaapressure",
+      "leaderboardId": 94284,
+      "webappUsername": "Phoegazer",
+      "steamAccountName": "0.0",
+      "kovaaksPlusActive": false,
+      "new": false,
+      "entries": 974
+    },
+    {
+      "scenarioName": "Amare Consecutive Tracking",
+      "leaderboardId": 44072,
+      "webappUsername": "SkylrExpired",
+      "steamAccountName": "Glorp",
+      "kovaaksPlusActive": false,
+      "new": false,
+      "entries": 2078
+    },
+    {
+      "scenarioName": "VT Angleshot Micro Valorant Smaller",
+      "leaderboardId": 70293,
+      "webappUsername": "Skylr",
+      "steamAccountName": "Amare",
+      "kovaaksPlusActive": false,
+      "new": false,
+      "entries": 2142
+    },
+    {
+      "scenarioName": "1w2tes Micro++",
+      "leaderboardId": 5746,
+      "webappUsername": null,
+      "steamAccountName": "Richard Nixon Bean Senpai",
+      "kovaaksPlusActive": false,
+      "new": false,
+      "entries": 2404
+    }
+  ],
+  "popularScenarios": [
+    {
+      "rank": 51,
+      "leaderboardId": 343,
+      "scenarioName": "Reflex Micro++ flick reload small",
+      "scenario": {
+        "aimType": null,
+        "authors": [
+          "based",
+          "on",
+          "Reflex",
+          "Flick",
+          "by",
+          "KovaaK"
+        ],
+        "description": "Even smaller Micro distance flick training. Train the most consistent form of flicking at a target - micro flicking - which usually follows a bigger, more chunky flick.Try your best to hit each target consciously for maximal learning effect, even if having to go slow first (no self destruct of target).The faster you are, the higher you potentially can score - a target respawns instantly. Be aware that score is accuracy weighted! See also other flick distance related scenarios:  micro++ < micro < small < medium"
+      },
+      "counts": {
+        "plays": 5009825,
+        "entries": 181027
+      },
+      "topScore": {
+        "score": 150
+      }
+    },
+    {
+      "rank": 52,
+      "leaderboardId": 573,
+      "scenarioName": "voxTS Static Click rAim",
+      "scenario": {
+        "aimType": null,
+        "authors": [
+          "Unans",
+          "voxel"
+        ],
+        "description": "Inspiration from BF4 test range, go as fast as you can. Static version, you have to click."
+      },
+      "counts": {
+        "plays": 5522370,
+        "entries": 177400
+      },
+      "topScore": {
+        "score": 409
+      }
+    },
+    {
+      "rank": 53,
+      "leaderboardId": 25,
+      "scenarioName": "centering I",
+      "scenario": {
+        "aimType": "Tracking",
+        "authors": [
+          "hanzo#3483"
+        ],
+        "description": "hanzo#3483"
+      },
+      "counts": {
+        "plays": 2111372,
+        "entries": 176407
+      },
+      "topScore": {
+        "score": 22428
+      }
+    },
+    {
+      "rank": 54,
+      "leaderboardId": 7125,
+      "scenarioName": "air far long strafes %70",
+      "scenario": {
+        "aimType": null,
+        "authors": [
+          "sini",
+          "patys"
+        ],
+        "description": "Air 2 far long strafes only for one minute"
+      },
+      "counts": {
+        "plays": 1082078,
+        "entries": 175748
+      },
+      "topScore": {
+        "score": 5204
+      }
+    },
+    {
+      "rank": 55,
+      "leaderboardId": 10256,
+      "scenarioName": "beanClick",
+      "scenario": {
+        "aimType": "Clicking",
+        "authors": [
+          "ethanoch"
+        ],
+        "description": "1w2t Smallflicks and voxTS had baby, and they named it beanTS,"
+      },
+      "counts": {
+        "plays": 1787043,
+        "entries": 173527
+      },
+      "topScore": {
+        "score": 438
+      }
+    },
+    {
+      "rank": 56,
+      "leaderboardId": 30154,
+      "scenarioName": "iiTzTimmy - 3 Tile Jumbo Tile Frenzy",
+      "scenario": {
+        "aimType": "Clicking",
+        "authors": [
+          "iiTzTimmy",
+          "Squidflingers",
+          "pleasewait"
+        ],
+        "description": "It's flicktastic!"
+      },
+      "counts": {
+        "plays": 2473836,
+        "entries": 170212
+      },
+      "topScore": {
+        "score": 297
+      }
+    },
+    {
+      "rank": 57,
+      "leaderboardId": 24967,
+      "scenarioName": "VT Smoothbot Novice",
+      "scenario": {
+        "aimType": "Tracking",
+        "authors": [
+          "Xytaglyph",
+          "Sackboy_Clank5",
+          "Tammas",
+          "Pauer",
+          "Raspberry/Vodkards"
+        ],
+        "description": "One invincible thin bot makes long and short strafes in a three dimensional space at various frequencies with smooth transitions between them."
+      },
+      "counts": {
+        "plays": 2430989,
+        "entries": 169231
+      },
+      "topScore": {
+        "score": 5281
+      }
+    },
+    {
+      "rank": 58,
+      "leaderboardId": 188,
+      "scenarioName": "voxTargetSwitch 250%",
+      "scenario": {
+        "aimType": null,
+        "authors": [
+          "voxel"
+        ],
+        "description": "250% Bot Speed"
+      },
+      "counts": {
+        "plays": 1425358,
+        "entries": 167636
+      },
+      "topScore": {
+        "score": 130
+      }
+    },
+    {
+      "rank": 59,
+      "leaderboardId": 284,
+      "scenarioName": "Close Fast Colosseum Robots",
+      "scenario": {
+        "aimType": null,
+        "authors": [
+          "NFNT",
+          "DrUninstall"
+        ],
+        "description": "Tracking various strafe bots.The bots will attack.The player must avoid them. Robots."
+      },
+      "counts": {
+        "plays": 946597,
+        "entries": 164965
+      },
+      "topScore": {
+        "score": 3518
+      }
+    },
+    {
+      "rank": 60,
+      "leaderboardId": 1140,
+      "scenarioName": "5 Sphere Hipfire Small Reload",
+      "scenario": {
+        "aimType": null,
+        "authors": [
+          "MattyBuj",
+          "creator",
+          "code",
+          "elo"
+        ],
+        "description": "Practice snapping to smaller than normal targets."
+      },
+      "counts": {
+        "plays": 1696810,
+        "entries": 163808
+      },
+      "topScore": {
+        "score": 322
+      }
+    },
+    {
+      "rank": 61,
+      "leaderboardId": 12918,
+      "scenarioName": "Smoothbot Switch Robots",
+      "scenario": {
+        "aimType": "Target Switching",
+        "authors": [
+          "DrUninstall"
+        ],
+        "description": "Target switch scenario based on Smoothbot. Humanoid targets."
+      },
+      "counts": {
+        "plays": 1476074,
+        "entries": 162991
+      },
+      "topScore": {
+        "score": 82
+      }
+    },
+    {
+      "rank": 62,
+      "leaderboardId": 18,
+      "scenarioName": "Cata IC Fast Strafes",
+      "scenario": {
+        "aimType": null,
+        "authors": [
+          "KovaaK"
+        ],
+        "description": "Low pressure hitscan tracking against a hard to hit target."
+      },
+      "counts": {
+        "plays": 2558978,
+        "entries": 162801
+      },
+      "topScore": {
+        "score": 12000
+      }
+    },
+    {
+      "rank": 63,
+      "leaderboardId": 911,
+      "scenarioName": "Pole Long Dodge",
+      "scenario": {
+        "aimType": "Tracking",
+        "authors": [
+          "nick",
+          "ryan",
+          "patys",
+          "AIMER7"
+        ],
+        "description": "Track the bot the best you can while long strafing."
+      },
+      "counts": {
+        "plays": 739594,
+        "entries": 162420
+      },
+      "topScore": {
+        "score": 34656
+      }
+    },
+    {
+      "rank": 64,
+      "leaderboardId": 591,
+      "scenarioName": "Wide Wall 3 Targets TE",
+      "scenario": {
+        "aimType": "Clicking",
+        "authors": [
+          "Ku",
+          "Tammas",
+          "Empyrean"
+        ],
+        "description": "modified map file to mitigate target size variance and offscreen flicks"
+      },
+      "counts": {
+        "plays": 1249401,
+        "entries": 160839
+      },
+      "topScore": {
+        "score": 514
+      }
+    },
+    {
+      "rank": 65,
+      "leaderboardId": 323,
+      "scenarioName": "Glider GOATED Easy",
+      "scenario": {
+        "aimType": "Tracking",
+        "authors": [
+          "Fallen"
+        ],
+        "description": "Track the bots gliding through the sky towards you on invisible gliders."
+      },
+      "counts": {
+        "plays": 1725826,
+        "entries": 160739
+      },
+      "topScore": {
+        "score": 6534
+      }
+    },
+    {
+      "rank": 66,
+      "leaderboardId": 15,
+      "scenarioName": "Pressure Aiming - 7 Targets",
+      "scenario": {
+        "aimType": "Clicking",
+        "authors": [],
+        "description": "Manage bombarding targets before they despawn or collide. A test of flick reflex, multitasking, and depth perception."
+      },
+      "counts": {
+        "plays": 1232970,
+        "entries": 157911
+      },
+      "topScore": {
+        "score": 31641
+      }
+    },
+    {
+      "rank": 67,
+      "leaderboardId": 2529,
+      "scenarioName": "ValTargetSwitch",
+      "scenario": {
+        "aimType": null,
+        "authors": [
+          "Parallel",
+          "Rob"
+        ],
+        "description": "Horizontal target switching"
+      },
+      "counts": {
+        "plays": 998701,
+        "entries": 157909
+      },
+      "topScore": {
+        "score": 136
+      }
+    },
+    {
+      "rank": 68,
+      "leaderboardId": 1237,
+      "scenarioName": "1w6tmultilayerclosedodgeslowersmaller",
+      "scenario": {
+        "aimType": null,
+        "authors": [
+          "ku",
+          "gli"
+        ],
+        "description": "1 click = 1 kill. Practice your precision on tiny targets. Good Luck!"
+      },
+      "counts": {
+        "plays": 624863,
+        "entries": 156862
+      },
+      "topScore": {
+        "score": 1191
+      }
+    },
+    {
+      "rank": 69,
+      "leaderboardId": 29489,
+      "scenarioName": "VT Pasu Rasp Novice",
+      "scenario": {
+        "aimType": "Clicking",
+        "authors": [
+          "Fuglaa",
+          "Pauer",
+          "Tammas",
+          "Raspberry/Vodkards"
+        ],
+        "description": "Single-click bots travel in straight lines at various angles on an X/Y Plane, while making unpredictable directional changes and colliding with walls. The player's weapon has three shots and empty magazines recover per bullet."
+      },
+      "counts": {
+        "plays": 2310453,
+        "entries": 156110
+      },
+      "topScore": {
+        "score": 2140
+      }
+    },
+    {
+      "rank": 70,
+      "leaderboardId": 5502,
+      "scenarioName": "Micro adjust 5 targets small",
+      "scenario": {
+        "aimType": null,
+        "authors": [
+          "Sandi"
+        ],
+        "description": "Practice to microadjust on small targets."
+      },
+      "counts": {
+        "plays": 6147968,
+        "entries": 155806
+      },
+      "topScore": {
+        "score": 2359
+      }
+    },
+    {
+      "rank": 71,
+      "leaderboardId": 1189,
+      "scenarioName": "SYW (Smooth Your Wrist) FIXED",
+      "scenario": {
+        "aimType": null,
+        "authors": [
+          "DevinDTV"
+        ],
+        "description": "A pure test of smoothness. You MUST use ADS (forced 103OW FoV) to prevent cheese. The glass on the sides give you time to react to bot strafes."
+      },
+      "counts": {
+        "plays": 8999339,
+        "entries": 153412
+      },
+      "topScore": {
+        "score": 5766
+      }
+    },
+    {
+      "rank": 72,
+      "leaderboardId": 113,
+      "scenarioName": "Multi-FOV Warmup",
+      "scenario": {
+        "aimType": null,
+        "authors": [
+          "Original",
+          "concept",
+          "by",
+          "Drimzi"
+        ],
+        "description": "Not a challenge -- Set up targets as desired and walk to a comfortable distance to warm up with different zoom FOVs: 103 16MF9 = OW hip, 40 vML = Ashe, 30 vML = Widow/Ana, 90 4ML3 = CSGO hip, 45 4ML3 = AUG, 40 4ML3 = AWP, 15 4ML3 = scout doublezoom, 10 4ML3 = AWP doublezoom. Make sure you ADS to shoot, all weapons except 90 4ML3 shoot blanks in hipfire mode. Zoom FOV of 90 4ML3 is also adjustable."
+      },
+      "counts": {
+        "plays": 177483,
+        "entries": 153350
+      },
+      "topScore": {
+        "score": 0
+      }
+    },
+    {
+      "rank": 73,
+      "leaderboardId": 12638,
+      "scenarioName": "Stair Dodge Robots",
+      "scenario": {
+        "aimType": "Tracking",
+        "authors": [
+          "pleasewait",
+          "AS",
+          "DrUninstall"
+        ],
+        "description": "Practice to do strafe aiming against stairs. The time limit extend 5 s on every kill. Target's strafe gradually become harder to aim (there are 10 levels). With Robots."
+      },
+      "counts": {
+        "plays": 907108,
+        "entries": 150168
+      },
+      "topScore": {
+        "score": 6378
+      }
+    },
+    {
+      "rank": 74,
+      "leaderboardId": 320,
+      "scenarioName": "Valorant Reflex Flick Strafing",
+      "scenario": {
+        "aimType": "Clicking",
+        "authors": [
+          "Ethanoch"
+        ],
+        "description": "A strafing target despawns after 500 ms."
+      },
+      "counts": {
+        "plays": 887688,
+        "entries": 149635
+      },
+      "topScore": {
+        "score": 74
+      }
+    },
+    {
+      "rank": 75,
+      "leaderboardId": 983,
+      "scenarioName": "Close LS Easy Dodge",
+      "scenario": {
+        "aimType": "Tracking",
+        "authors": [
+          "patys",
+          "AIMER7"
+        ],
+        "description": "Close quarter combat against a long strafing bot. Keep moving for increased score."
+      },
+      "counts": {
+        "plays": 1177236,
+        "entries": 147571
+      },
+      "topScore": {
+        "score": 24746
+      }
+    },
+    {
+      "rank": 76,
+      "leaderboardId": 30442,
+      "scenarioName": "iiTzTimmy - Smoothbot Switch Robots",
+      "scenario": {
+        "aimType": "Target Switching",
+        "authors": [
+          "iiTzTimmy",
+          "DrUninstall",
+          "pleasewait"
+        ],
+        "description": "Target switch scenario based on Smoothbot. Humanoid targets."
+      },
+      "counts": {
+        "plays": 1052998,
+        "entries": 146806
+      },
+      "topScore": {
+        "score": 80
+      }
+    },
+    {
+      "rank": 77,
+      "leaderboardId": 525,
+      "scenarioName": "fuglaaXYLongstrafes",
+      "scenario": {
+        "aimType": null,
+        "authors": [
+          "fuglaa"
+        ],
+        "description": "Track the long strafing target vertically and horizontally. Too easy?? Try the hardmode on the workshop"
+      },
+      "counts": {
+        "plays": 2974403,
+        "entries": 145222
+      },
+      "topScore": {
+        "score": 581
+      }
+    },
+    {
+      "rank": 78,
+      "leaderboardId": 24969,
+      "scenarioName": "VT Multiclick 120 Novice",
+      "scenario": {
+        "aimType": "Clicking",
+        "authors": [
+          "Raspberry/Vodkards"
+        ],
+        "description": "Medium sized bots spawn on the inner three walls within a rectangular prism, with every single click elimination reloading the player's three round magazine."
+      },
+      "counts": {
+        "plays": 1799681,
+        "entries": 140872
+      },
+      "topScore": {
+        "score": 2730
+      }
+    },
+    {
+      "rank": 79,
+      "leaderboardId": 65,
+      "scenarioName": "psalmflick TPS Strafing",
+      "scenario": {
+        "aimType": null,
+        "authors": [
+          "patys",
+          "psalm"
+        ],
+        "description": " Great practice for flicking to many targets quickly."
+      },
+      "counts": {
+        "plays": 2029620,
+        "entries": 140423
+      },
+      "topScore": {
+        "score": 327
+      }
+    },
+    {
+      "rank": 80,
+      "leaderboardId": 24975,
+      "scenarioName": "VT Bounceshot Novice",
+      "scenario": {
+        "aimType": "Clicking",
+        "authors": [
+          "Raspberry/Vodkards",
+          "Whisper"
+        ],
+        "description": "Four single-click bots leap in mid-high arcs on top of a flat surface, changing depths as they traverse. The player's weapon has three shots and empty magazines recover in their entirety upon each elimination."
+      },
+      "counts": {
+        "plays": 1401802,
+        "entries": 139171
+      },
+      "topScore": {
+        "score": 1930
+      }
+    },
+    {
+      "rank": 81,
+      "leaderboardId": 29483,
+      "scenarioName": "VT 1w6ts Rasp Novice",
+      "scenario": {
+        "aimType": "Clicking",
+        "authors": [
+          "Raspberry/Vodkards"
+        ],
+        "description": "Small stationary bots spawn in random locations on an X/Y Plane, with each single click elimination reloading a single bullet."
+      },
+      "counts": {
+        "plays": 1484631,
+        "entries": 138239
+      },
+      "topScore": {
+        "score": 1940
+      }
+    },
+    {
+      "rank": 82,
+      "leaderboardId": 10,
+      "scenarioName": "Reflex Flick - Fair",
+      "scenario": {
+        "aimType": null,
+        "authors": [],
+        "description": "Flick to a short-lived target before it despawns. A test of reflex and flick accuracy. Single 150 size target with 450 ms lifetime."
+      },
+      "counts": {
+        "plays": 1887098,
+        "entries": 137894
+      },
+      "topScore": {
+        "score": 11911
+      }
+    },
+    {
+      "rank": 83,
+      "leaderboardId": 467,
+      "scenarioName": "Thin Gauntlet V2",
+      "scenario": {
+        "aimType": "Tracking",
+        "authors": [
+          "PPV"
+        ],
+        "description": "Track very thin targets that make long strafes, progressively getting harder. Challenge mode takes up to 2-3 minutes."
+      },
+      "counts": {
+        "plays": 5577806,
+        "entries": 137873
+      },
+      "topScore": {
+        "score": 914
+      }
+    },
+    {
+      "rank": 84,
+      "leaderboardId": 235,
+      "scenarioName": "Wide Wall 6Targets",
+      "scenario": {
+        "aimType": null,
+        "authors": [
+          "Ku"
+        ],
+        "description": "6 targets spawn on a wall.  Great practice for flicking to many targets quickly.  Challenge mode has accuracy-based scoring."
+      },
+      "counts": {
+        "plays": 1993541,
+        "entries": 137535
+      },
+      "topScore": {
+        "score": 220
+      }
+    },
+    {
+      "rank": 85,
+      "leaderboardId": 690,
+      "scenarioName": "Reflex Micro Flick 250ms",
+      "scenario": {
+        "aimType": null,
+        "authors": [
+          "based",
+          "on",
+          "Reflex",
+          "Flick",
+          "by",
+          "KovaaK"
+        ],
+        "description": "Micro Flick / Short Flick distance training. target lifetime: 250ms. Adjustments: increased map depth (8192 units), increased spawn area padding"
+      },
+      "counts": {
+        "plays": 852713,
+        "entries": 136051
+      },
+      "topScore": {
+        "score": 11802
+      }
+    },
+    {
+      "rank": 86,
+      "leaderboardId": 1633,
+      "scenarioName": "devTS Goated NR Static Small",
+      "scenario": {
+        "aimType": null,
+        "authors": [
+          "DevinDTV",
+          "sini",
+          "Unans",
+          "Vendetta"
+        ],
+        "description": "Low FoV target switch with decent range and smallish targets. Targets aren't moving. Good to practice switching speed."
+      },
+      "counts": {
+        "plays": 4883326,
+        "entries": 136048
+      },
+      "topScore": {
+        "score": 861
+      }
+    },
+    {
+      "rank": 87,
+      "leaderboardId": 30632,
+      "scenarioName": "iiTzTimmy - Tile Frenzy 180 Strafing 400Prct Track",
+      "scenario": {
+        "aimType": "Tracking",
+        "authors": [
+          "iiTzTimmy",
+          "kroader",
+          "pleasewait"
+        ],
+        "description": "tile frenzy 180"
+      },
+      "counts": {
+        "plays": 957676,
+        "entries": 134420
+      },
+      "topScore": {
+        "score": 131
+      }
+    },
+    {
+      "rank": 88,
+      "leaderboardId": 2012,
+      "scenarioName": "FuglaaXYVert Easy",
+      "scenario": {
+        "aimType": null,
+        "authors": [
+          "Fuglaa",
+          "Tammas"
+        ],
+        "description": "FuglaaXY but mostly vertical (easy)"
+      },
+      "counts": {
+        "plays": 1119482,
+        "entries": 133411
+      },
+      "topScore": {
+        "score": 10296
+      }
+    },
+    {
+      "rank": 89,
+      "leaderboardId": 1719,
+      "scenarioName": "Reactive Flick",
+      "scenario": {
+        "aimType": "",
+        "authors": [
+          ""
+        ],
+        "description": "Practice to recognize a movement direction of a target quickly. A target begins to move when you hit it (lifetime: 500 ms).   ---------------------------------- Note: MCA stands for \"Midweek Competitive Aiming\", a local event for the competitive aiming community in Japan."
+      },
+      "counts": {
+        "plays": 957083,
+        "entries": 132503
+      },
+      "topScore": {
+        "score": 2760
+      }
+    },
+    {
+      "rank": 90,
+      "leaderboardId": 117,
+      "scenarioName": "Close Long Strafes Invincible",
+      "scenario": {
+        "aimType": null,
+        "authors": [
+          "KovaaK"
+        ],
+        "description": "Close Fast Strafes, but the bots are invincible"
+      },
+      "counts": {
+        "plays": 3101172,
+        "entries": 129888
+      },
+      "topScore": {
+        "score": 21114
+      }
+    },
+    {
+      "rank": 91,
+      "leaderboardId": 197,
+      "scenarioName": "1w2ts reload",
+      "scenario": {
+        "aimType": "Clicking",
+        "authors": [
+          "Zeeq"
+        ],
+        "description": "1wall 2targets small, except accuracy isn't factored into score; instead, you have ammo that reloads on kill."
+      },
+      "counts": {
+        "plays": 3058603,
+        "entries": 129411
+      },
+      "topScore": {
+        "score": 200
+      }
+    },
+    {
+      "rank": 92,
+      "leaderboardId": 5144,
+      "scenarioName": "RawMouseControlClicking3",
+      "scenario": {
+        "aimType": "Clicking",
+        "authors": [
+          "gli"
+        ],
+        "description": "3 Small Targets, Small ROM, Static."
+      },
+      "counts": {
+        "plays": 8615861,
+        "entries": 129208
+      },
+      "topScore": {
+        "score": 4640
+      }
+    },
+    {
+      "rank": 93,
+      "leaderboardId": 68,
+      "scenarioName": "ww3t Voltaic",
+      "scenario": {
+        "aimType": "Clicking",
+        "authors": [
+          "Ku",
+          "Tammas"
+        ],
+        "description": "modified map file to mitigate target size variance and offscreen flicks."
+      },
+      "counts": {
+        "plays": 3071579,
+        "entries": 128319
+      },
+      "topScore": {
+        "score": 529
+      }
+    },
+    {
+      "rank": 94,
+      "leaderboardId": 24968,
+      "scenarioName": "VT PreciseOrb Novice",
+      "scenario": {
+        "aimType": "Tracking",
+        "authors": [
+          "Whisper",
+          "Raspberry/Vodkards"
+        ],
+        "description": "One invincible spherical bot makes tall and fast leaps around the player, while changing direction at either the apex of its jump or at the end of its descent."
+      },
+      "counts": {
+        "plays": 1128363,
+        "entries": 127124
+      },
+      "topScore": {
+        "score": 2200000
+      }
+    },
+    {
+      "rank": 95,
+      "leaderboardId": 24979,
+      "scenarioName": "VT psalmTS Novice",
+      "scenario": {
+        "aimType": "Target Switching",
+        "authors": [
+          "Raspberry/Vodkards",
+          "patys",
+          "psalm",
+          "Tammas",
+          "Pauer"
+        ],
+        "description": "Spherical bots make slow horizontal movements, occasionally changing height levels and direction. Each bot needs to be tracked for a short period to be eliminated."
+      },
+      "counts": {
+        "plays": 1425429,
+        "entries": 126855
+      },
+      "topScore": {
+        "score": 1320
+      }
+    },
+    {
+      "rank": 96,
+      "leaderboardId": 319,
+      "scenarioName": "1w4ts Voltaic",
+      "scenario": {
+        "aimType": "Clicking",
+        "authors": [
+          "ku",
+          "gli",
+          "kovaak",
+          "Pudge"
+        ],
+        "description": "1wall 4targets small, except accuracy isn't factored into score; instead, you have ammo that reloads on kill. Added 103 FOV minimum."
+      },
+      "counts": {
+        "plays": 5091331,
+        "entries": 126144
+      },
+      "topScore": {
+        "score": 508
+      }
+    },
+    {
+      "rank": 97,
+      "leaderboardId": 1678,
+      "scenarioName": "3 Tile Jumbo Tile Frenzy",
+      "scenario": {
+        "aimType": null,
+        "authors": [
+          "Squidflingers"
+        ],
+        "description": "It's flicktastic!"
+      },
+      "counts": {
+        "plays": 2841442,
+        "entries": 124603
+      },
+      "topScore": {
+        "score": 289
+      }
+    },
+    {
+      "rank": 98,
+      "leaderboardId": 246,
+      "scenarioName": "Reflex Flick - Mini",
+      "scenario": {
+        "aimType": null,
+        "authors": [],
+        "description": "Flick to a short-lived target before it despawns. A test of reflex and flick accuracy. Single 200 size target with 500 ms lifetime."
+      },
+      "counts": {
+        "plays": 1083676,
+        "entries": 122480
+      },
+      "topScore": {
+        "score": 10530
+      }
+    },
+    {
+      "rank": 99,
+      "leaderboardId": 243,
+      "scenarioName": "Target Switching 360 Static",
+      "scenario": {
+        "aimType": "Target Switching",
+        "authors": [
+          "Dr.",
+          "Kroader"
+        ],
+        "description": "Target Switching 360, but the bots are static"
+      },
+      "counts": {
+        "plays": 1553816,
+        "entries": 122313
+      },
+      "topScore": {
+        "score": 21267
+      }
+    },
+    {
+      "rank": 100,
+      "leaderboardId": 22,
+      "scenarioName": "Target Switching 360",
+      "scenario": {
+        "aimType": null,
+        "authors": [
+          "Dr.",
+          "Kroader"
+        ],
+        "description": "For all your relaa fans, a scenario to train target switching"
+      },
+      "counts": {
+        "plays": 1089564,
+        "entries": 122110
+      },
+      "topScore": {
+        "score": 19461
+      }
+    }
+  ],
+  "topPlayerComparisons": [
+    {
+      "username": "Prismatix",
+      "rank": 1,
+      "country": "JP",
+      "points": 42788553,
+      "pointsDifference": 42788553,
+      "percentageDifference": null
+    },
+    {
+      "username": "𝘽⁧⁧ 𝙇𝙊𝙊𝘿",
+      "rank": 2,
+      "country": "US",
+      "points": 42431633,
+      "pointsDifference": 42431633,
+      "percentageDifference": null
+    },
+    {
+      "username": "fuA Kryzion",
+      "rank": 3,
+      "country": "DE",
+      "points": 40916428,
+      "pointsDifference": 40916428,
+      "percentageDifference": null
+    },
+    {
+      "username": "Верный",
+      "rank": 4,
+      "country": "JP",
+      "points": 40294804,
+      "pointsDifference": 40294804,
+      "percentageDifference": null
+    },
+    {
+      "username": "rA EviL",
+      "rank": 5,
+      "country": "GB",
+      "points": 39527896,
+      "pointsDifference": 39527896,
+      "percentageDifference": null
+    }
+  ],
+  "similarRankComparisons": [
+    {
+      "username": "kittycide :3",
+      "rank": 24941,
+      "country": null,
+      "points": 9829447,
+      "pointsDifference": 9829447,
+      "percentageDifference": null,
+      "rankDifference": -10
+    },
+    {
+      "username": "Memati",
+      "rank": 24942,
+      "country": null,
+      "points": 9829188,
+      "pointsDifference": 9829188,
+      "percentageDifference": null,
+      "rankDifference": -9
+    },
+    {
+      "username": "Zyuncc",
+      "rank": 24943,
+      "country": null,
+      "points": 9829180,
+      "pointsDifference": 9829180,
+      "percentageDifference": null,
+      "rankDifference": -8
+    },
+    {
+      "username": "狂野，震撼亚洲",
+      "rank": 24944,
+      "country": "CN",
+      "points": 9829144,
+      "pointsDifference": 9829144,
+      "percentageDifference": null,
+      "rankDifference": -7
+    },
+    {
+      "username": "@6x0eYe#",
+      "rank": 24945,
+      "country": "UA",
+      "points": 9828378,
+      "pointsDifference": 9828378,
+      "percentageDifference": null,
+      "rankDifference": -6
+    }
+  ],
+  "rankHistory": {
+    "global": [
+      {
+        "date": "2025-03-27",
+        "rank": 24951
+      },
+      {
+        "date": "(previous period)",
+        "rank": 24951
+      }
+    ],
+    "country": [
+      {
+        "date": "2025-03-27",
+        "rank": 698
+      },
+      {
+        "date": "(previous period)",
+        "rank": 698
+      }
+    ],
+    "region": [
+      {
+        "date": "2025-03-27",
+        "rank": 3973
+      },
+      {
+        "date": "(previous period)",
+        "rank": 3973
+      }
+    ]
+  }
+}
