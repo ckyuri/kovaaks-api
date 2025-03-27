@@ -1100,6 +1100,105 @@ const client = new KovaaksClient({
 
 This persistent caching system significantly improves performance for repeated API calls, even across different application runs.
 
+## Advanced API Optimization Techniques
+
+The Kovaaks API wrapper includes several advanced optimization techniques to improve performance when working with slow API endpoints:
+
+### Method-Level Request Deduplication
+
+The wrapper now implements method-level deduplication in addition to HTTP request deduplication:
+
+```typescript
+// This will only execute once even if called multiple times with the same parameters
+// The second call immediately returns the cached Promise from the first call
+const profile1 = client.combined.getCompleteProfile('username');
+const profile2 = client.combined.getCompleteProfile('username');
+
+// They will be the exact same promise object
+console.log(profile1 === profile2); // true
+```
+
+This is particularly useful for complex operations like profile lookups that might be triggered from multiple UI components simultaneously.
+
+### Optimized Batch Processing
+
+The wrapper includes utilities for batching multiple API calls efficiently:
+
+```typescript
+// Get scenario scores for multiple users with optimized batching
+const multiUserScores = await client.combined.getScenarioScoresForMultipleUsers(
+  ['user1', 'user2', 'user3', 'user4', 'user5'],
+  {
+    concurrentRequests: 2,  // Process 2 users at a time
+    maxPages: 3,            // Get up to 3 pages per user
+    showProgressLogs: true  // Show progress in console
+  }
+);
+
+// Process paginated data efficiently
+const allScenarios = await client.user.getAllScenarioScores('username', {
+  maxPages: 5,             // Limit to 5 pages maximum
+  pageSize: 100,           // 100 items per page
+  sortParams: ['count']    // Sort by play count
+});
+```
+
+### The Combined API
+
+To minimize the number of API calls needed, use the Combined API methods which fetch multiple data points in parallel:
+
+```typescript
+// This makes multiple API calls in parallel and combines the results
+const userData = await client.combined.getAllUserData('username', {
+  includeScenarioDetails: true,
+  includeBenchmarkDetails: true
+});
+
+// Instead of these separate calls:
+const profile = await client.user.getProfile('username');
+const scenarios = await client.scenarios.getUserScores('username');
+const benchmarks = await client.benchmarks.getUserBenchmarks('username');
+```
+
+### Configuring Request Timeouts
+
+Since some API endpoints can be slow, you can configure longer timeouts:
+
+```typescript
+// Configure a 2-minute timeout for all requests
+const client = new KovaaksClient({
+  timeout: 120000 // 2 minutes
+});
+
+// For individual requests that might take longer
+const result = await client.user.getScenarioScores('username', {
+  timeout: 180000 // 3 minutes for this specific call
+});
+```
+
+### Manual Control of Caching
+
+You can manually control caching behavior for optimal performance:
+
+```typescript
+// Disable caching globally
+client.setCaching(false);
+
+// Re-enable it
+client.setCaching(true);
+
+// Bypass cache for a specific request
+const freshData = await client.leaderboards.getGlobalLeaderboard({
+  forceRefresh: true
+});
+
+// Get profile using cache first (faster but might be outdated)
+const cachedProfile = await client.user.getProfile('username');
+
+// Force refresh when you need the latest data
+const freshProfile = await client.user.getProfile('username', true);
+```
+
 ## License
 
 MIT

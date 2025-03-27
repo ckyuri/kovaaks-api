@@ -26,6 +26,20 @@ const pendingRequests = new Map<string, PendingRequest>();
 // Default TTL for pending requests (30 seconds)
 const PENDING_REQUEST_TTL = 30000;
 
+// Add higher-level method deduplication cache
+interface PendingMethodCall {
+  promise: Promise<any>;
+  timestamp: number;
+  expiresAt: number;
+}
+
+// In-memory cache of in-flight method calls to avoid duplicate method executions
+// This is separate from HTTP request deduplication and works at a higher level
+const pendingMethodCalls = new Map<string, PendingMethodCall>();
+
+// Default TTL for pending method calls (2 minutes - longer than HTTP requests)
+const PENDING_METHOD_CALL_TTL = 120000; // 2 minutes
+
 // Default retry settings
 interface RetryConfig {
   maxRetries: number;
@@ -42,6 +56,77 @@ const DEFAULT_RETRY_CONFIG: RetryConfig = {
   backoffFactor: 2,
   retryableStatusCodes: [408, 429, 500, 502, 503, 504]
 };
+
+/**
+ * Helper function to deduplicate any async function call
+ * This creates a wrapper that will return the same promise for duplicate calls
+ * 
+ * @param fn The function to deduplicate
+ * @param options Optional configuration
+ * @returns A wrapped function that deduplicates calls with the same arguments
+ */
+export function deduplicateRequests<T extends (...args: any[]) => Promise<any>>(
+  fn: T,
+  options: {
+    ttl?: number;
+    keyGenerator?: (...args: Parameters<T>) => string;
+  } = {}
+): T {
+  const ttl = options.ttl || PENDING_METHOD_CALL_TTL;
+  
+  // The wrapper function with the same signature as the original
+  const wrapped = ((...args: Parameters<T>) => {
+    // Generate a cache key from function name and args
+    const cacheKey = options.keyGenerator 
+      ? options.keyGenerator(...args)
+      : `${fn.name}:${JSON.stringify(args)}`;
+    
+    // Check if this method call is already in-flight
+    const pendingCall = pendingMethodCalls.get(cacheKey);
+    if (pendingCall && Date.now() < pendingCall.expiresAt) {
+      console.log(`Method call deduplication: returning existing promise for ${cacheKey}`);
+      return pendingCall.promise;
+    }
+    
+    // If not, execute the function
+    const promise = fn(...args);
+    
+    // Store the promise and metadata
+    pendingMethodCalls.set(cacheKey, {
+      promise,
+      timestamp: Date.now(),
+      expiresAt: Date.now() + ttl
+    });
+    
+    // Clean up the cache entry when the promise resolves or rejects
+    promise.finally(() => {
+      const pendingCall = pendingMethodCalls.get(cacheKey);
+      if (pendingCall && pendingCall.promise === promise) {
+        pendingMethodCalls.delete(cacheKey);
+      }
+    });
+    
+    return promise;
+  }) as T;
+  
+  return wrapped;
+}
+
+/**
+ * Cleans up expired pending method calls
+ */
+export const cleanupPendingMethodCalls = (): void => {
+  const now = Date.now();
+  
+  for (const [key, call] of pendingMethodCalls.entries()) {
+    if (now > call.expiresAt) {
+      pendingMethodCalls.delete(key);
+    }
+  }
+};
+
+// Set up periodic cleanup for method call cache
+setInterval(cleanupPendingMethodCalls, 60000); // Cleanup every minute
 
 /**
  * Creates a request cache key from the request details
@@ -519,4 +604,57 @@ export const buildQueryParams = (params: Record<string, any>): string => {
     .join('&');
     
   return query ? `?${query}` : '';
-}; 
+};
+
+/**
+ * Batch multiple API calls into a single process for efficiency
+ * This helps reduce the overhead of multiple separate API calls
+ * 
+ * @param calls An array of function calls to execute in optimized batches
+ * @param options Options for controlling batch execution
+ * @returns Results from all calls in the same order
+ */
+export async function batchApiCalls<T>(
+  calls: (() => Promise<T>)[],
+  options: {
+    concurrency?: number;
+    delay?: number;
+    cancelSignal?: AbortSignal;
+  } = {}
+): Promise<T[]> {
+  const { 
+    concurrency = 3,
+    delay = 200,
+    cancelSignal
+  } = options;
+  
+  const results: T[] = new Array(calls.length);
+  
+  // Process in batches based on concurrency
+  for (let i = 0; i < calls.length; i += concurrency) {
+    // Check for cancellation
+    if (cancelSignal?.aborted) {
+      console.warn('Batch API call operation was canceled');
+      break;
+    }
+    
+    const batch = calls.slice(i, i + concurrency);
+    const batchPromises = batch.map((call, batchIndex) => 
+      call().then(result => {
+        // Store result in the correct position
+        results[i + batchIndex] = result;
+        return result;
+      })
+    );
+    
+    // Wait for current batch to complete
+    await Promise.all(batchPromises);
+    
+    // Add delay between batches to avoid overloading the API
+    if (i + concurrency < calls.length) {
+      await new Promise(resolve => setTimeout(resolve, delay));
+    }
+  }
+  
+  return results;
+} 

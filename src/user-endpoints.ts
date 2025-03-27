@@ -1,28 +1,30 @@
 import { KovaaksClient } from './index';
-import type { 
-  CompleteUserProfile, 
+import { apiCache } from './utils/cache';
+import { deduplicateRequests } from './utils/api';
+import type {
+  UserProfile,
+  UserScenarioScore,
+  ExtendedUserProfile,
   UserScenarioPerformance,
+  CompleteUserProfile,
   UserBenchmarkProgress,
   UserActivityTimeline,
-  UserRegionalContext,
   ActivityTimelineOptions,
+  UserActivity,
   ProfileSearchOptions,
   ProfileSearchResult,
-  ExtendedUserProfile,
-  UserScenarioScore,
-  UserActivity,
-  UserProfile
+  UserRegionalContext
 } from './types';
-import { apiCache } from './utils/cache';
 
 /**
  * Cache durations for different API calls (in ms)
  */
 const CACHE_TTL = {
-  USER_PROFILE: 15 * 60 * 1000, // 15 minutes
-  SCENARIO_SCORES: 15 * 60 * 1000, // 15 minutes
-  PERCENTILE_DATA: 60 * 60 * 1000, // 1 hour
-  RANK_HISTORY: 24 * 60 * 60 * 1000, // 24 hours
+  USER_PROFILE: 15 * 60 * 1000,         // 15 minutes
+  SCENARIO_PERFORMANCE: 30 * 60 * 1000, // 30 minutes
+  BENCHMARK_PROGRESS: 60 * 60 * 1000,   // 1 hour
+  ACTIVITY_TIMELINE: 15 * 60 * 1000,    // 15 minutes
+  USER_COMPARISON: 30 * 60 * 1000,      // 30 minutes
 };
 
 /**
@@ -128,17 +130,11 @@ export class CombinedUserAPI {
     this.client = client;
   }
   
-  /**
-   * Get a complete user profile with all related information
-   * 
-   * @param username - Username to get complete profile for
-   * @param forceRefresh - Whether to bypass cache
-   * @returns Complete user profile with related information
-   */
-  async getCompleteProfile(
+  // Apply deduplication to getCompleteProfile to prevent redundant calls
+  private _getCompleteProfileImpl = async (
     username: string,
     forceRefresh = false
-  ): Promise<ExtendedUserProfile | null> {
+  ): Promise<ExtendedUserProfile | null> => {
     try {
       // Create a cache key
       const cacheKey = `complete_profile_${username.toLowerCase()}`;
@@ -249,7 +245,10 @@ export class CombinedUserAPI {
       console.error(`Error getting complete profile for ${username}:`, error);
       return null;
     }
-  }
+  };
+  
+  // Create a deduplicated version of the method
+  getCompleteProfile = deduplicateRequests(this._getCompleteProfileImpl);
   
   /**
    * Get a user's scenario performance with detailed metadata
@@ -258,11 +257,17 @@ export class CombinedUserAPI {
    * @param forceRefresh - Whether to bypass cache
    * @returns User's scenario performance with metadata
    */
-  async getScenarioPerformance(username: string, forceRefresh = false): Promise<UserScenarioPerformance | null> {
+  private _getScenarioPerformanceImpl = async (
+    username: string, 
+    forceRefresh = false
+  ): Promise<UserScenarioPerformance | null> => {
     // Convert the boolean forceRefresh into pagination params format expected by the method
     const params = {}; // Default empty pagination params
     return this.client.scenarios.getUserScenarioPerformance(username, params, forceRefresh);
-  }
+  };
+  
+  // Create a deduplicated version of the method
+  getScenarioPerformance = deduplicateRequests(this._getScenarioPerformanceImpl);
   
   /**
    * Get a user's benchmark progress with category details
@@ -275,12 +280,12 @@ export class CombinedUserAPI {
    * @param forceRefresh - Whether to bypass cache
    * @returns User's benchmark progress with category details
    */
-  async getBenchmarkProgress(
+  private _getBenchmarkProgressImpl = async (
     username: string, 
     steamId: string, 
     benchmarkId: number, 
     forceRefresh = false
-  ): Promise<UserBenchmarkProgress | null> {
+  ): Promise<UserBenchmarkProgress | null> => {
     // Validate all required parameters
     if (!username || !steamId || !benchmarkId) {
       console.warn('All parameters (username, steamId, benchmarkId) are required for benchmark progress');
@@ -288,7 +293,13 @@ export class CombinedUserAPI {
     }
     
     return this.client.benchmarks.getUserBenchmarkProgress(username, steamId, benchmarkId, forceRefresh);
-  }
+  };
+  
+  // Create a deduplicated version of the method with a custom key generator to include all parameters
+  getBenchmarkProgress = deduplicateRequests(this._getBenchmarkProgressImpl, {
+    keyGenerator: (username, steamId, benchmarkId, forceRefresh = false) => 
+      `getBenchmarkProgress:${username.toLowerCase()}:${steamId}:${benchmarkId}`
+  });
   
   /**
    * Find benchmark progress for a specific user
@@ -298,10 +309,10 @@ export class CombinedUserAPI {
    * @param forceRefresh - Whether to bypass cache
    * @returns User's benchmark progress
    */
-  async findBenchmarkProgress(
+  private _findBenchmarkProgressImpl = async (
     username: string,
     forceRefresh = false
-  ): Promise<UserBenchmarkProgress | null> {
+  ): Promise<UserBenchmarkProgress | null> => {
     try {
       // First get the user profile to find their Steam ID
       const userProfile = await this.getCompleteProfile(username, forceRefresh);
@@ -359,7 +370,10 @@ export class CombinedUserAPI {
       console.error('Error finding benchmark progress:', error);
       return null;
     }
-  }
+  };
+  
+  // Create a deduplicated version of the method
+  findBenchmarkProgress = deduplicateRequests(this._findBenchmarkProgressImpl);
   
   /**
    * Normalize benchmark progress to a range of 0-100%
@@ -420,11 +434,11 @@ export class CombinedUserAPI {
    * @param forceRefresh - Whether to bypass cache (only used if options is a number for backward compatibility)
    * @returns User's activity timeline with scenario details
    */
-  async getActivityTimeline(
+  private _getActivityTimelineImpl = async (
     username: string, 
     options?: ActivityTimelineOptions | number,
     forceRefresh = false
-  ): Promise<UserActivityTimeline | null> {
+  ): Promise<UserActivityTimeline | null> => {
     // Handle backward compatibility
     if (typeof options === 'number') {
       return this.client.user.getUserActivityTimeline(username, options, forceRefresh);
@@ -432,7 +446,23 @@ export class CombinedUserAPI {
     
     // Use the new options approach
     return this.client.user.getUserActivityTimeline(username, options);
-  }
+  };
+  
+  // Create a deduplicated version of the method with a custom key generator to handle complex options
+  getActivityTimeline = deduplicateRequests(this._getActivityTimelineImpl, {
+    keyGenerator: (username, options, forceRefresh = false) => {
+      // Handle the case where options is a number (limit)
+      if (typeof options === 'number') {
+        return `getActivityTimeline:${username.toLowerCase()}:limit=${options}`;
+      }
+      
+      // For object options, extract relevant caching parameters
+      const limit = options?.limit || 20;
+      const forceRefreshOpt = options?.forceRefresh || forceRefresh;
+      
+      return `getActivityTimeline:${username.toLowerCase()}:limit=${limit}:forceRefresh=${forceRefreshOpt}`;
+    }
+  });
   
   /**
    * Get a user's regional positioning context
@@ -441,9 +471,15 @@ export class CombinedUserAPI {
    * @param forceRefresh - Whether to bypass cache
    * @returns User's regional positioning context
    */
-  async getRegionalContext(username: string, forceRefresh = false): Promise<UserRegionalContext | null> {
+  private _getRegionalContextImpl = async (
+    username: string, 
+    forceRefresh = false
+  ): Promise<UserRegionalContext | null> => {
     return this.client.leaderboards.getUserRegionalContext(username, forceRefresh);
-  }
+  };
+  
+  // Create a deduplicated version of the method
+  getRegionalContext = deduplicateRequests(this._getRegionalContextImpl);
   
   /**
    * Get ALL possible user data in a single comprehensive call
@@ -1146,7 +1182,7 @@ export class CombinedUserAPI {
    * @param options - Options for retrieving the extended profile
    * @returns Extended user profile with additional data
    */
-  async getExtendedProfile(
+  private _getExtendedProfileImpl = async (
     username: string,
     options: {
       forceRefresh?: boolean;
@@ -1154,7 +1190,7 @@ export class CombinedUserAPI {
       includeDailyHistory?: boolean;
       historyDays?: number;
     } = {}
-  ): Promise<ExtendedUserProfile | null> {
+  ): Promise<ExtendedUserProfile | null> => {
     const extendedProfile = await this.client.user.getExtendedUserProfile(username, options);
     
     // If profile doesn't exist, return null
@@ -1216,7 +1252,21 @@ export class CombinedUserAPI {
     }
 
     return extendedProfile;
-  }
+  };
+  
+  // Create a deduplicated version of the method with a custom key generator
+  getExtendedProfile = deduplicateRequests(this._getExtendedProfileImpl, {
+    keyGenerator: (username, options = {}) => {
+      const { 
+        forceRefresh = false, 
+        includePercentiles = true,
+        includeDailyHistory = true,
+        historyDays = 30
+      } = options;
+      
+      return `getExtendedProfile:${username.toLowerCase()}:${forceRefresh}:${includePercentiles}:${includeDailyHistory}:${historyDays}`;
+    }
+  });
   
   /**
    * Calculate a user's performance trends over time for specific scenarios
@@ -1226,7 +1276,7 @@ export class CombinedUserAPI {
    * @param options - Options for trend calculation
    * @returns Performance trends for each scenario
    */
-  async calculatePerformanceTrends(
+  private _calculatePerformanceTrendsImpl = async (
     username: string,
     options: {
       scenarioNames?: string[];
@@ -1235,7 +1285,7 @@ export class CombinedUserAPI {
       includeBenchmarkScenarios?: boolean;
       forceRefresh?: boolean;
     } = {}
-  ): Promise<PerformanceTrend[]> {
+  ): Promise<PerformanceTrend[]> => {
     const {
       minSamples = 3,
       includeBenchmarkScenarios = true,
@@ -1444,7 +1494,34 @@ export class CombinedUserAPI {
       console.error('Error calculating performance trends:', error);
       return [];
     }
-  }
+  };
+  
+  // Create a deduplicated version of the method with a custom key generator
+  calculatePerformanceTrends = deduplicateRequests(this._calculatePerformanceTrendsImpl, {
+    keyGenerator: (username, options = {}) => {
+      const { 
+        minSamples = 3, 
+        includeBenchmarkScenarios = true,
+        forceRefresh = false,
+        scenarioNames = []
+      } = options;
+      
+      // Format time range for cache key
+      let timeRangeKey = '';
+      if (options.timeRange) {
+        const start = options.timeRange.startDate 
+          ? new Date(options.timeRange.startDate).toISOString().split('T')[0] 
+          : 'start';
+        const end = options.timeRange.endDate 
+          ? new Date(options.timeRange.endDate).toISOString().split('T')[0] 
+          : 'now';
+        timeRangeKey = `:${start}-${end}`;
+      }
+      
+      // Combine all relevant parameters into a cache key
+      return `calculatePerformanceTrends:${username.toLowerCase()}:${minSamples}:${includeBenchmarkScenarios}:${forceRefresh}:${scenarioNames.sort().join(',')}${timeRangeKey}`;
+    }
+  });
   
   /**
    * Compare two users' performance across scenarios
@@ -1455,7 +1532,7 @@ export class CombinedUserAPI {
    * @param options - Options for the comparison
    * @returns Detailed comparison of the two users
    */
-  async compareUsers(
+  private _compareUsersImpl = async (
     username: string,
     comparedToUsername: string,
     options: {
@@ -1465,7 +1542,7 @@ export class CombinedUserAPI {
       includeRecommendations?: boolean;
       fallbackToSimilarRank?: boolean;
     } = {}
-  ): Promise<UserComparison | null> {
+  ): Promise<UserComparison | null> => {
     const {
       forceRefresh = false,
       limitToCommonScenarios = true,
@@ -1851,10 +1928,23 @@ export class CombinedUserAPI {
       
       return comparison;
     } catch (error) {
-      console.error('Error comparing users:', error);
+      console.error(`Error comparing users ${username} and ${comparedToUsername}:`, error);
       return null;
     }
-  }
+  };
+  
+  // Create a deduplicated version of the method with a custom key generator
+  compareUsers = deduplicateRequests(this._compareUsersImpl, {
+    keyGenerator: (username, comparedToUsername, options = {}) => {
+      const { 
+        forceRefresh = false,
+        limitToCommonScenarios = true,
+        minScenarios = 5
+      } = options;
+      
+      return `compareUsers:${username.toLowerCase()}:${comparedToUsername.toLowerCase()}:${limitToCommonScenarios}:${minScenarios}:${forceRefresh}`;
+    }
+  });
 }
 
 /**

@@ -1,5 +1,5 @@
 import type { AxiosInstance } from 'axios';
-import { get } from '../utils/api';
+import { get, post, batchApiCalls, deduplicateRequests } from '../utils/api';
 import { apiCache } from '../utils/cache';
 import Fuse from 'fuse.js';
 import type { 
@@ -1266,14 +1266,14 @@ export class UserAPI {
   }
 
   /**
-   * Get all scenario scores for a user by handling pagination automatically
-   * This is useful when you need to fetch all of a user's scores regardless of pagination
+   * Get all scenario scores for a user, handling pagination automatically
+   * This method is optimized to fetch multiple pages of scores efficiently
    * 
-   * @param username - The username to look up
+   * @param username - Username to get scores for
    * @param options - Options for fetching and filtering scores
-   * @returns All user scenario scores combined from multiple pages
+   * @returns Array of all user scenario scores
    */
-  async getAllScenarioScores(
+  private _getAllScenarioScoresImpl = async (
     username: string,
     options: {
       maxPages?: number;
@@ -1283,14 +1283,14 @@ export class UserAPI {
       showProgressLogs?: boolean;
       cancelSignal?: AbortSignal;
     } = {}
-  ): Promise<UserScenarioScore[]> {
+  ): Promise<UserScenarioScore[]> => {
     if (!username) {
-      console.warn('Username is required for scenario scores lookup');
+      console.warn('Username is required for getting scenario scores');
       return [];
     }
     
     const { 
-      maxPages = 10,
+      maxPages = 5,
       pageSize = 100,
       sortParams = [],
       forceRefresh = false,
@@ -1298,93 +1298,103 @@ export class UserAPI {
       cancelSignal
     } = options;
     
-    // Create a cache key
-    const cacheKey = `all_user_scenario_scores_${username.toLowerCase()}_${sortParams.join('_')}`;
+    // Create a cache key that includes maxPages and pageSize
+    const cacheKey = `all_scenario_scores_${username.toLowerCase()}_${maxPages}_${pageSize}_${sortParams.join(',')}`;
     
     // Check cache first
     if (!forceRefresh) {
-      const cachedData = apiCache.get<UserScenarioScore[]>(cacheKey);
-      if (cachedData) {
+      const cachedScores = apiCache.get<UserScenarioScore[]>(cacheKey);
+      if (cachedScores) {
         if (showProgressLogs) {
-          console.log(`Returning ${cachedData.length} cached scenario scores for ${username}`);
+          console.log(`Using cached scenario scores for ${username} (${cachedScores.length} scores)`);
         }
-        return cachedData;
+        return cachedScores;
       }
     }
     
-    try {
-      // First get the initial page to determine total items
-      const firstPage = await this.getScenarioScores(username, {
-        page: 1,
-        max: pageSize,
-        sort_param: sortParams.length > 0 ? sortParams : undefined
-      });
-      
-      // If there's no data or we're canceled, return an empty array
-      if (!firstPage || !firstPage.data || cancelSignal?.aborted) {
-        return [];
-      }
-      
-      // Calculate how many pages we need to fetch
-      const totalPages = Math.min(
-        Math.ceil(firstPage.total / pageSize),
-        maxPages
-      );
-      
+    if (showProgressLogs) {
+      console.log(`Fetching scenario scores for ${username}...`);
+    }
+    
+    // Get the first page to determine total pages
+    const firstPage = await this.getScenarioScores(username, {
+      page: 1,
+      max: pageSize,
+      sort_param: sortParams
+    });
+    
+    if (!firstPage || !firstPage.data) {
       if (showProgressLogs) {
-        console.log(`Found ${firstPage.total} total scenario scores for ${username} across ${totalPages} pages`);
-        console.log(`Fetching page 1/${totalPages}...`);
+        console.log(`No scores found for ${username}`);
       }
-      
-      // We already have the first page of data
-      const allScores: UserScenarioScore[] = [...firstPage.data];
-      
-      // If we need more pages, fetch them concurrently
-      if (totalPages > 1) {
-        // Prepare promises for all remaining pages
-        const pagePromises: Promise<UserScenarioScoresResponse>[] = [];
-        
-        for (let page = 2; page <= totalPages; page++) {
-          // Skip if the operation has been canceled
-          if (cancelSignal?.aborted) break;
-          
-          if (showProgressLogs) {
-            console.log(`Fetching page ${page}/${totalPages}...`);
-          }
-          
-          pagePromises.push(
-            this.getScenarioScores(username, {
-              page,
-              max: pageSize,
-              sort_param: sortParams.length > 0 ? sortParams : undefined
-            })
-          );
-        }
-        
-        // Wait for all pages to complete
-        const pageResults = await Promise.all(pagePromises);
-        
-        // Process the results
-        for (const result of pageResults) {
-          if (result && result.data) {
-            allScores.push(...result.data);
-          }
-        }
-      }
-      
-      if (showProgressLogs) {
-        console.log(`Successfully fetched ${allScores.length} scenario scores for ${username}`);
-      }
-      
-      // Cache the combined data
-      apiCache.set(cacheKey, allScores, CACHE_TTL.USER_SCORES);
-      
-      return allScores;
-    } catch (error) {
-      console.error(`Error getting all scenario scores for ${username}:`, error);
       return [];
     }
-  }
+    
+    // Calculate total pages
+    const totalPages = Math.ceil(parseInt(firstPage.total.toString(), 10) / pageSize);
+    const pagesToFetch = Math.min(totalPages, maxPages);
+    
+    if (showProgressLogs) {
+      console.log(`Found ${firstPage.total} scores for ${username} across ${totalPages} pages, fetching ${pagesToFetch} pages`);
+    }
+    
+    // If we only need one page, return it immediately
+    if (pagesToFetch <= 1) {
+      const scores = firstPage.data || [];
+      apiCache.set(cacheKey, scores, CACHE_TTL.USER_SCORES);
+      return scores;
+    }
+    
+    // Create array of page fetch operations (skip page 1 since we already have it)
+    const pageOperations = [];
+    for (let page = 2; page <= pagesToFetch; page++) {
+      pageOperations.push(() => this.getScenarioScores(username, {
+        page,
+        max: pageSize,
+        sort_param: sortParams
+      }));
+    }
+    
+    // Use our optimized batch API call function to fetch the remaining pages
+    if (showProgressLogs) {
+      console.log(`Fetching remaining ${pageOperations.length} pages in optimized batches`);
+    }
+    
+    // Efficiently fetch all pages in concurrent batches
+    const pageResults = await batchApiCalls(pageOperations, {
+      concurrency: 3,
+      delay: 200,
+      cancelSignal
+    });
+    
+    // Combine all scores from all pages
+    const allScores = [...(firstPage.data || [])];
+    
+    // Add scores from each additional page
+    for (const pageResult of pageResults) {
+      if (pageResult && pageResult.data) {
+        allScores.push(...pageResult.data);
+      }
+    }
+    
+    if (showProgressLogs) {
+      console.log(`Retrieved a total of ${allScores.length} scores for ${username}`);
+    }
+    
+    // Cache the combined results
+    apiCache.set(cacheKey, allScores, CACHE_TTL.USER_SCORES);
+    
+    return allScores;
+  };
+  
+  // Create a deduplication wrapper around the implementation
+  getAllScenarioScores = deduplicateRequests(this._getAllScenarioScoresImpl, {
+    // Create a custom key generator that includes relevant parameters
+    keyGenerator: (username, options = {}) => {
+      const { maxPages = 5, pageSize = 100, sortParams = [] } = options;
+      return `getAllScenarioScores:${username.toLowerCase()}:${maxPages}:${pageSize}:${sortParams.join(',')}`;
+    }
+  });
 
   /**
    * Get all scenario scores for multiple users efficiently
@@ -1394,7 +1404,7 @@ export class UserAPI {
    * @param options - Options for fetching and filtering scores
    * @returns Map of username to their scenario scores
    */
-  async getScenarioScoresForMultipleUsers(
+  private _getScenarioScoresForMultipleUsersImpl = async (
     usernames: string[],
     options: {
       maxPages?: number;
@@ -1405,7 +1415,7 @@ export class UserAPI {
       concurrentRequests?: number;
       cancelSignal?: AbortSignal;
     } = {}
-  ): Promise<Map<string, UserScenarioScore[]>> {
+  ): Promise<Map<string, UserScenarioScore[]>> => {
     if (!usernames || usernames.length === 0) {
       return new Map();
     }
@@ -1430,45 +1440,32 @@ export class UserAPI {
       console.log(`Fetching scenario scores for ${uniqueUsernames.length} users with concurrency ${concurrentRequests}`);
     }
     
-    // Process users in batches of concurrentRequests
-    for (let i = 0; i < uniqueUsernames.length; i += concurrentRequests) {
-      // Check if operation was canceled
-      if (cancelSignal?.aborted) {
-        if (showProgressLogs) {
-          console.log('Operation was canceled');
-        }
-        break;
-      }
-      
-      const batch = uniqueUsernames.slice(i, i + concurrentRequests);
-      
-      if (showProgressLogs) {
-        console.log(`Processing batch ${i/concurrentRequests + 1} with ${batch.length} users`);
-      }
-      
-      // Process this batch concurrently
-      const batchPromises = batch.map(username => 
-        this.getAllScenarioScores(username, {
+    // Create batch operations for efficient processing
+    const batchOperations = uniqueUsernames.map(username => {
+      return async () => {
+        const scores = await this.getAllScenarioScores(username, {
           maxPages,
           pageSize,
           sortParams,
           forceRefresh,
-          showProgressLogs: false,
+          showProgressLogs: showProgressLogs ? true : false,
           cancelSignal
-        }).then(scores => ({ username, scores }))
-      );
-      
-      // Wait for all users in this batch to complete
-      const batchResults = await Promise.all(batchPromises);
-      
-      // Add results to the map
-      for (const { username, scores } of batchResults) {
-        results.set(username, scores);
-      }
-      
-      // If we have more batches to process, add a small delay to avoid API rate limits
-      if (i + concurrentRequests < uniqueUsernames.length) {
-        await new Promise(resolve => setTimeout(resolve, 500));
+        });
+        return { username, scores };
+      };
+    });
+    
+    // Use the batchApiCalls utility for efficient processing
+    const batchResults = await batchApiCalls(batchOperations, {
+      concurrency: concurrentRequests,
+      delay: 300, // Slightly longer delay between batches
+      cancelSignal
+    });
+    
+    // Add results to the map
+    for (const result of batchResults) {
+      if (result) { // Ensure result isn't undefined
+        results.set(result.username, result.scores);
       }
     }
     
@@ -1477,5 +1474,23 @@ export class UserAPI {
     }
     
     return results;
-  }
+  };
+  
+  // Create a deduplication wrapper around the implementation
+  getScenarioScoresForMultipleUsers = deduplicateRequests(this._getScenarioScoresForMultipleUsersImpl, {
+    // Custom key generator that includes relevant parameters
+    keyGenerator: (usernames, options = {}) => {
+      const { 
+        maxPages = 5, 
+        pageSize = 100, 
+        sortParams = [],
+        concurrentRequests = 3
+      } = options;
+      
+      // Sort usernames to ensure consistent cache key regardless of order
+      const sortedUsernames = [...usernames].sort().join(',');
+      
+      return `getScenarioScoresForMultipleUsers:${sortedUsernames}:${maxPages}:${pageSize}:${sortParams.join(',')}:${concurrentRequests}`;
+    }
+  });
 } 
